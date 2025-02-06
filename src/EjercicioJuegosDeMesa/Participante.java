@@ -20,4 +20,5 @@ public class Participante {
 		this.puntuacion = puntuacion;
 	}
 	
+	
 }
