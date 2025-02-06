@@ -16,32 +16,31 @@ public class Partida {
 		this.ganador = obtenerGanador();
 	}
 
-	String nombre;
-	Participante[] participantes;
-	Participante ganador;
+	private String nombre;
+	private Participante[] participantes;
+	private Participante ganador;
 
 	private Participante obtenerGanador() {
 		ganador = participantes[0];
 		for (Participante p : participantes) {
-			if (p.puntuacion > ganador.puntuacion) {
+			if (p.getPuntuacion() > ganador.getPuntuacion()) {
 				ganador = p;
 			}
 		}
 		return ganador;
 	}
 	
-	
+	 
 	void obtenerMayorPerdedor() {
 		ganador = participantes[0];
 		for (Participante p : participantes) {
-			if (p.puntuacion < ganador.puntuacion) {
+			if (p.getPuntuacion() < ganador.getPuntuacion()) {
 				ganador = p;
 			}
 		}
 		System.out.println("El mayor perdedor es" + ganador);
 
 	}
-
 	void ImprimeGanador() {
 		System.out.println("Estos son los datos del ganador: " + ganador);
 	}

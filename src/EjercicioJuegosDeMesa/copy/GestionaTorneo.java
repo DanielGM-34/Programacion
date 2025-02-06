@@ -12,14 +12,12 @@ public class GestionaTorneo {
 		Participante participantes[] = { p1, p2, p3, p4 };
 
 		Partida n1 = new Partida("Catán", participantes);
-		
+
 		n1.ImprimeGanador();
-	
+
 		n1.obtenerMayorPerdedor();
+		
 
 	}
 
-	
-	
-	
 }
