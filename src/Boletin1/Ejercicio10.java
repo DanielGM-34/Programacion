@@ -8,7 +8,7 @@ public class Ejercicio10 {
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);
-
+/*pipipi popopo */
 		System.out.println("Adivina el número aleatorio: ");
 		int humano = entrada.nextInt();
 
