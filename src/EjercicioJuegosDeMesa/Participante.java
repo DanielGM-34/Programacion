@@ -19,6 +19,6 @@ public class Participante {
 		this.edad = edad;
 		this.puntuacion = puntuacion;
 	}
-	
-	
+
+	/* comentario modificado */
 }
