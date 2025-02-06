@@ -40,7 +40,7 @@ public class Partida {
 		}
 		System.out.println("El mayor perdedor es" + ganador);
 
-	}
+	} 
 	void ImprimeGanador() {
 		System.out.println("Estos son los datos del ganador: " + ganador);
 	}
