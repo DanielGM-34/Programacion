@@ -36,7 +36,7 @@ public class Partida {
 		for (Participante p : participantes) {
 			if (p.getPuntuacion() < ganador.getPuntuacion()) {
 				ganador = p;
-			}
+			} 
 		}
 		System.out.println("El mayor perdedor es" + ganador);
 
@@ -44,4 +44,4 @@ public class Partida {
 	void ImprimeGanador() {
 		System.out.println("Estos son los datos del ganador: " + ganador);
 	}
-}
+} 

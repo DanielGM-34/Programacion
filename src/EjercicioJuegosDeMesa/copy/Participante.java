@@ -17,7 +17,7 @@ public class Participante {
 	}
 
 	public void setNick(String nick) {
-		this.nick = nick;
+		this.nick = nick; 
 	}
 
 	public String getNombre() {
