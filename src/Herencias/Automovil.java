@@ -16,13 +16,15 @@ public class Automovil extends Vehiculo {
 		this.calificacionEcologica = calificacionEcologica;
 	}
 
+	
 	@Override
 	public String toString() {
-		return "Automovil [calificacionEcologica=" + calificacionEcologica + "]";
+		return "Automovil [calificacionEcologica=" + calificacionEcologica + ", dueno=" + dueno + ", numPuertas="
+				+ numPuertas + ", numRuedas=" + numRuedas + "]";
 	}
 
 	void imprimeResumen() {
-
+		this.toString();
 	}
 
 	boolean tieneLicenciaParaCircular(String ciudad) {

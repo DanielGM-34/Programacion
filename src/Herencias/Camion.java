@@ -16,10 +16,11 @@ public class Camion extends Vehiculo {
 		this.numEjes = numEjes;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Camion [tonelajeKilos=" + tonelajeKilos + ", numPasajeros=" + numPasajeros + ", numEjes=" + numEjes
-				+ "]";
+				+ ", dueno=" + dueno + ", numPuertas=" + numPuertas + ", numRuedas=" + numRuedas + "]";
 	}
 
 	public void setTonelajeKilos(int tonelajeKilos) {
@@ -43,7 +44,7 @@ public class Camion extends Vehiculo {
 	}
 
 	void imprimeResumen() {
-
+		this.toString();
 	}
 
 	String[] getLicencias() {

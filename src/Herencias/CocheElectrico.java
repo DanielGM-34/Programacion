@@ -21,4 +21,15 @@ public class CocheElectrico extends Automovil{
 			this.tipoBateria = "LFP";
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "CocheElectrico [tipoBateria=" + tipoBateria + ", dueno=" + dueno + ", numPuertas=" + numPuertas
+				+ ", numRuedas=" + numRuedas + "]";
+	}
+
+	public void imprimeResumen() {
+		this.toString();
+	}
+	
 }

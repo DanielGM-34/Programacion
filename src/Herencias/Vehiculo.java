@@ -1,6 +1,10 @@
 package Herencias;
 
 public class Vehiculo {
+	protected String dueno;
+	protected int numPuertas;
+	protected int numRuedas;
+	
 	public String getDueno() {
 		return dueno;
 	}
@@ -17,10 +21,6 @@ public class Vehiculo {
 		this.numPuertas = numPuertas;
 	}
 
-	protected String dueno;
-	protected int numPuertas;
-	protected int numRuedas;
-
 	public int getNumRuedas() {
 		return numRuedas; 
 	}
@@ -34,5 +34,10 @@ public class Vehiculo {
 		this.dueno = dueno;
 		this.numPuertas = numPuertas;
 		this.numRuedas = numRuedas;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehiculo [dueno=" + dueno + ", numPuertas=" + numPuertas + ", numRuedas=" + numRuedas + "]";
 	}
 }
