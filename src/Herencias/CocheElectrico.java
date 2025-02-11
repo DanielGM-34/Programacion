@@ -9,7 +9,7 @@ public class CocheElectrico extends Automovil{
 		this.tipoBateria = tipoBateria;
 	}
 
-	private String tipoBateria;
+	protected String tipoBateria;
 
 	public CocheElectrico(String dueno, int numPuertas, int numRuedas, String calificacionEcologica, String tipoBateria) {
 		super(dueno,numPuertas,numRuedas,calificacionEcologica);

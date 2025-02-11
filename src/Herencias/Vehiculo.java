@@ -17,12 +17,12 @@ public class Vehiculo {
 		this.numPuertas = numPuertas;
 	}
 
-	private String dueno;
-	private int numPuertas;
-	private int numRuedas;
+	protected String dueno;
+	protected int numPuertas;
+	protected int numRuedas;
 
 	public int getNumRuedas() {
-		return numRuedas;
+		return numRuedas; 
 	}
 
 	public void setNumRuedas(int numRuedas) {
