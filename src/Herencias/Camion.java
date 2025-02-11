@@ -47,8 +47,32 @@ public class Camion extends Vehiculo {
 		this.toString();
 	}
 
+	
+	public void tipoLicencia() {
+		if(getTonelajeKilos() > 3500 && getNumPasajeros() <=9 ) {
+			System.out.println("Tipo de carnet C");
+		}
+		
+		else if (getTonelajeKilos() >=3500 && getTonelajeKilos() <=7500  && getNumPasajeros() <=9)  {
+			System.out.println("Tipo de carnet C1");
+		}
+		
+		else if (getTonelajeKilos()==750)  {
+			System.out.println("Tipo de carnet C1+E");
+		}
+		
+		else {
+			System.out.println("Tipo de carnet C+E");
+		}
+	}
+	
 	String[] getLicencias() {
 		return null;
 	}
+	
+	
+	
+	
+	
 
 }
