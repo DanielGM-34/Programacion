@@ -26,6 +26,5 @@ public class GestionaProfesores {
 		p5.getSueldo();
 
 		ProfesorTitular p6 = (ProfesorTitular) interino2; // ClassCastException en tiempo de ejecución.
-
 	}
 }
