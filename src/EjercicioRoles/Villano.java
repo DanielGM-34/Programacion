@@ -1,14 +1,14 @@
 package EjercicioRoles;
 
-public class Mago extends Personaje {
+public class Villano extends Personaje{
 
-	public Mago(String nombre, int nivel, float hP, String arma) {
+	public Villano(String nombre, int nivel, float hP, String arma) {
 		super(nombre, nivel, hP, arma);
 	}
 
 	@Override
 	public String toString() {
-		return "Mago [getNombre()=" + getNombre() + ", getNivel()=" + getNivel() + ", getHP()=" + getHP()
+		return "Villano [getNombre()=" + getNombre() + ", getNivel()=" + getNivel() + ", getHP()=" + getHP()
 				+ ", getArma()=" + getArma() + ", toString()=" + super.toString() + ", hashCode()=" + hashCode()
 				+ ", getClass()=" + getClass() + "]";
 	}
@@ -28,8 +28,9 @@ public class Mago extends Personaje {
 			return false;
 		return true;
 	}
+
 	public void getTipoArma() {	
-		System.out.println("Hechizo");
+		System.out.println("");
 	}
 	
 	
@@ -40,5 +41,4 @@ public class Mago extends Personaje {
 	public boolean esAtacado(Personaje atacante, int distancia) {
 		return true;
 	}
-
 }
