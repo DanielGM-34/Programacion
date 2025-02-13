@@ -2,9 +2,11 @@ package EjercicioRoles;
 
 public class Villano extends Personaje{
 
-	public Villano(String nombre, int nivel, float hP, String arma) {
-		super(nombre, nivel, hP, arma);
+	public Villano(String nombre, int nivel, float hP) {
+		super(nombre, nivel, hP, "");
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -31,14 +33,5 @@ public class Villano extends Personaje{
 
 	public void getTipoArma() {	
 		System.out.println("");
-	}
-	
-	
-	public boolean esAtacado(Personaje atacante) {
-		return true;
-	}
-	
-	public boolean esAtacado(Personaje atacante, int distancia) {
-		return true;
 	}
 }

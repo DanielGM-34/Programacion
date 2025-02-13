@@ -2,8 +2,8 @@ package EjercicioRoles;
 
 public class Arquero extends Personaje {
 
-	public Arquero(String nombre, int nivel, float hP, String arma) {
-		super(nombre, nivel, hP, arma);
+	public Arquero(String nombre, int nivel, float hP) {
+		super(nombre, nivel, hP, "flecha");
 	}
 
 	@Override
@@ -28,17 +28,20 @@ public class Arquero extends Personaje {
 			return false;
 		return true;
 	}
-	
-	public void getTipoArma() {	
-		System.out.println("Flecha");
-	}
-	
-	
-	public boolean esAtacado(Personaje atacante) {
-		return true;
-	}
-	
+
 	public boolean esAtacado(Personaje atacante, int distancia) {
-		return true;
+		boolean atacado = false;
+		return atacante instanceof Mago|| distancia<50;
+	}
+
+	public boolean esAtacado(Personaje atacante) {
+		boolean atacado = false;
+		if (atacante instanceof Mago) {
+			atacado = true;
+		}
+		else {
+			atacado = false;
+		}
+		return atacado;
 	}
 }

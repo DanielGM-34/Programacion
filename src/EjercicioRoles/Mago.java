@@ -2,8 +2,8 @@ package EjercicioRoles;
 
 public class Mago extends Personaje {
 
-	public Mago(String nombre, int nivel, float hP, String arma) {
-		super(nombre, nivel, hP, arma);
+	public Mago(String nombre, int nivel, float hP) {
+		super(nombre, nivel, hP, "hechizo");
 	}
 
 	@Override
@@ -28,16 +28,19 @@ public class Mago extends Personaje {
 			return false;
 		return true;
 	}
-	public void getTipoArma() {	
-		System.out.println("Hechizo");
-	}
-	
-	
+
 	public boolean esAtacado(Personaje atacante) {
-		return true;
+		return false;
 	}
-	
+
 	public boolean esAtacado(Personaje atacante, int distancia) {
+		if() {
+			
+		}
+		
+		
+		
+		
 		return true;
 	}
 

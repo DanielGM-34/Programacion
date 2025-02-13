@@ -1,9 +1,9 @@
 package EjercicioRoles;
 
-public class Caballero extends Personaje{
+public class Caballero extends Personaje {
 	public Caballero(String nombre, int nivel, float hP, String arma) {
 		super(nombre, nivel, hP, arma);
-		
+
 	}
 
 	@Override
@@ -12,17 +12,32 @@ public class Caballero extends Personaje{
 				+ ", getArma()=" + getArma() + ", toString()=" + super.toString() + ", hashCode()=" + hashCode()
 				+ ", getClass()=" + getClass() + "]";
 	}
-	
-	public void getTipoArma() {
-		System.out.println("Espada");
-	}
-	
-	public boolean esAtacado(Personaje atacante) {
-		return true;
-	}
-	
+
+
 	public boolean esAtacado(Personaje atacante, int distancia) {
-		return true;
+		boolean atacado = false;
+		if(atacante instanceof Arquero&& distancia>100) {
+			atacado=true;
+			
+		}
+		
+		return atacado;
+	}
+
+	public boolean esAtacado(Personaje atacante) {
+		boolean atacado = false;
+		if (atacante instanceof Mago) {
+			atacado = true;
+		}
+		
+		else if (atacante instanceof Arquero) {
+			atacado = true;
+		}
+
+		else {
+			atacado = false;
+		}
+		return atacado;
 	}
 
 	@Override

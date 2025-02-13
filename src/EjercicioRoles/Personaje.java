@@ -33,6 +33,19 @@ public class Personaje {
 		this.arma = arma;
 	}
 	
+	public boolean esAtacado(Personaje atacante) {
+		return true;
+	}
+	
+	public boolean esAtacado(Personaje atacante, int distancia) {
+		
+		
+		
+		
+		
+		return true;
+	}
+	
 	@Override
 	public String toString() {
 		return "Personaje [nombre=" + nombre + ", nivel=" + nivel + ", HP=" + HP + ", arma=" + arma + "]";
@@ -60,4 +73,5 @@ public class Personaje {
 		return Float.floatToIntBits(HP) == Float.floatToIntBits(other.HP) && Objects.equals(arma, other.arma)
 				&& nivel == other.nivel && Objects.equals(nombre, other.nombre);
 	}
+	
 }
