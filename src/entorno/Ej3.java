@@ -27,6 +27,7 @@ public class Ej3 {
 				System.out.println("Perdiste.");
 			}
 		} while (userChoice != 0);
+		System.out.println("Saliendo");
 	}
 
 	private static String getChoiceName(int choice) {
