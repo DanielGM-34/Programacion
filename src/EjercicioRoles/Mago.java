@@ -34,7 +34,7 @@ public class Mago extends Personaje {
 	}
 
 	public boolean esAtacado(Personaje atacante, int distancia) {
-		if() {
+		if(distancia <5) {
 			
 		}
 		
