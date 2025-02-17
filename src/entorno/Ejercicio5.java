@@ -4,6 +4,7 @@ public class Ejercicio5 {
 
 	public static void main(String[] args) {
 		int numero = 4;
+		int suma=0;
 		int[] array = new int[23];
 		numero = 8 - 20;
 		numero = 14 + numero - 2;
@@ -17,7 +18,11 @@ public class Ejercicio5 {
 		}
 		for (int i = 0; i < array.length; i++) {
 			array[i] = numero - 2;
-		}
+			 suma=array[3] + numero;
+
+		} 
 		System.out.println("Fin");
+		System.out.println("Fin");
+
 	}
 }

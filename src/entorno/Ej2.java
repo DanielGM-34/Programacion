@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Ej2 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int[] numbers = new int[10];
-		System.out.println("Introduce 10 números:");
+		Scanner entrada = new Scanner(System.in);
+		int[] num = new int[10];
+		System.out.println("Pon 10 números:");
 
 		for (int i = 0; i < 10; i++) {
-			numbers[i] = scanner.nextInt();
+			num[i] = entrada.nextInt();
 		}
 
-		System.out.println("Números en orden inverso:");
+		System.out.println("Números en orden invertido:");
 		for (int i = 9; i >= 0; i--) {
-			System.out.println(numbers[i]);
+			System.out.println(num[i]);
 		}
 	}
 }
