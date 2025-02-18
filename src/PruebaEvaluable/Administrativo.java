@@ -5,7 +5,6 @@ public class Administrativo extends Empleado{
 
 	public Administrativo(String nombre, String dni, float salario, float extraProductividad) {
 		super(nombre, dni, salario);
-		this.salario= getSalario() + getExtraProductividad();
 		this.extraProductividad =extraProductividad;
 		}
 	
