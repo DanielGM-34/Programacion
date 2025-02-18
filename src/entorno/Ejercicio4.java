@@ -24,4 +24,4 @@ public class Ejercicio4 {
 		}
 		System.out.println("Fin");
 	}
-}
+} 
