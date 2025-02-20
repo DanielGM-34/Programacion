@@ -50,7 +50,7 @@ public class Equipos {
 
 	@Override
 	public String toString() {
-		return "Equipos [nombreEquipo=" + nombreEquipo + ", MAC=" + direccion + ", numIncidentes pendi=" + numIncidentes
+		return   nombreEquipo + " - " + direccion + ", numIncidentes pendi=" + numIncidentes
 				+ "]";
 	}
 

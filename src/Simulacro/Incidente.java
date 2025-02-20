@@ -12,7 +12,7 @@ public class Incidente {
 	private Equipos equipo;
 	private Estado estado;
 	private Criticidad criticidad;
-
+ 
 	public Incidente(int id, String nombre, String descripcion, LocalDate fechaApertura, LocalDate fechaCierre,
 			Equipos equipo, Estado estado, Criticidad criticidad) {
 		super();
