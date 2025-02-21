@@ -3,17 +3,22 @@ package PruebaEvaluable;
 import java.util.Objects;
 
 public class Empleado {
-	private String nombre;
-	private String dni;
-	private float salario;
-
 	public Empleado(String nombre, String dni, float salario) {
 		super();
 		this.nombre = nombre;
 		this.dni = dni;
-		this.salario = salario;
+		setSalario(salario);
 	}
-	
+
+	private String nombre;
+	private String dni;
+	private float salario;
+
+	@Override
+	public String toString() {
+		return "Empleado [nombre=" + nombre + ", dni=" + dni + ", salario=" + this.salario + "]";
+	}
+
 	protected String getNombre() {
 		return nombre;
 	}
@@ -35,10 +40,14 @@ public class Empleado {
 	}
 
 	protected void setSalario(float salario) {
-		this.salario = salario;
+		if (salario < 0) {
+			System.out.println("Error, debes introducir un salario mayor a 0.");
+			this.salario = 1134;
+		} else {
+			this.salario = salario;
+		}
 	}
-	
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni);
@@ -54,22 +63,5 @@ public class Empleado {
 			return false;
 		Empleado other = (Empleado) obj;
 		return Objects.equals(dni, other.dni);
-	}
-
-	@Override
-	public String toString() {
-		return "Empleado [nombre=" + nombre + ", dni=" + dni + ", salario=" + salario + "]";
-	}
-	
-	public void calcularSalarioBase() {
-		boolean valido=false;
-		if(salario>0) {
-			valido=false;
-			this.salario=salario;
-		}
-		else {
-			valido=true;
-			this.salario= salario+0;
-		}
 	}
 }

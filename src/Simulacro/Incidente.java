@@ -99,10 +99,12 @@ public class Incidente {
 		this.criticidad = criticidad;
 	}
 
+
+
+
 	@Override
 	public String toString() {
-		return "Incidente [nombre=" + nombre + ", fechaApertura=" + fechaApertura + ", equipo=" + equipo + ", estado="
-				+ estado + ", criticidad=" + criticidad + "]";
+		return nombre + estado +" : " + criticidad  +" "+ fechaApertura + " - "+ equipo.getNombreEquipo();
 	}
 
 	@Override
