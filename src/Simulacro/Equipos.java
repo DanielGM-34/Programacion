@@ -50,12 +50,9 @@ public class Equipos {
 
 	@Override
 	public String toString() {
-<<<<<<< HEAD
 		return   nombreEquipo + " - " + direccion + ", numIncidentes pendi=" + numIncidentes
 				+ "]";
-=======
-		return nombreEquipo + " - " + direccion + " : " + numIncidentes;
->>>>>>> f708ef7459791f0d095758619167f797167766e6
+		
 	}
 
 	@Override

@@ -1,4 +1,6 @@
-package Paquete2;
+package Controlador;
+
+import Modelo.Animal;
 
 public class GestionaAnimales {
 
@@ -8,7 +10,7 @@ public class GestionaAnimales {
 
 //	no visible porque es private	perro.edad;
 		perro.nombre = "Tobi";
-		perro.tipo = "perro";
+		perro.setTipo("perro");
 
 // no visible porque tiene visibilidad por defecto y está en otro paquete 
 //perro.tipo;
@@ -18,7 +20,7 @@ public class GestionaAnimales {
 		perro.DarleDeComer();
 
 		gato.nombre = "Poo";
-		gato.tipo = "gato";
+		gato.setTipo("gato");
 
 		gato.DarleDeComer();
 
