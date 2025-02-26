@@ -18,9 +18,12 @@ public class GestionaCuentaBanco {
 
 		CuentaBanco c2 = new CuentaBanco(8000, LocalDate.of(2025, 02, 25), "ES91 2100 0418 4502 0005 1332", pepe, juan);
 		System.out.println(c2);
-	
+
 		CuentaBanco c3 = new CuentaBanco(500, LocalDate.of(2025, 02, 25), "ES91 5698 4512 0145 6844 1245", juan, luis);
 		System.out.println(c3);
-	}
+		
+		
+		System.out.println(CuentaBanco.getContador());
 
+	}
 }

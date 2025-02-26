@@ -3,7 +3,7 @@ package POO;
 public class Persona {
 	String nombre;
 	String apellidos;
-	String dni;
+	public String dni;
 	int edad;
 
 	public Persona(String nombre, String apellidos, String dni, int edad) {

@@ -1,4 +1,7 @@
-package POO;
+package Controlador;
+
+import POO.Equipo;
+import POO.Persona;
 
 public class GestionaEquipos {
 

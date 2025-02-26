@@ -1,17 +1,17 @@
 package POO;
 
 public class Pokemon {
-	String nombre;
-	String tipo;
-	int nivelDeVida;
-	String evoluciones;
+	public String nombre;
+	public String tipo;
+	public int nivelDeVida;
+	public String evoluciones;
 
-	String convierteCadena() {
+	public String convierteCadena() {
 		String cadena = "Pokemon:" + nombre + "tipo:" + tipo + "nivelDeVida:" + nivelDeVida;
 		return cadena;
 	}
 
-	boolean fight(Pokemon p2) {
+	public boolean fight(Pokemon p2) {
 		boolean gana = true;
 
 		if (nivelDeVida > p2.nivelDeVida) {

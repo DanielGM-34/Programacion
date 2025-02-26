@@ -46,45 +46,44 @@ public class CuentaBanco {
 		return "CuentaBanco [idCuenta=" + idCuenta + ", saldo=" + saldo + ", fechaApertura=" + fechaApertura + ", iban="
 				+ iban + ", clienteTitular=" + clienteTitular + ", clienteAutorizado=" + clienteAutorizado + "]";
 	}
-	
 
-	protected LocalDate getFechaApertura() {
+	public LocalDate getFechaApertura() {
 		return fechaApertura;
 	}
 
-	protected void setFechaApertura(LocalDate fechaApertura) {
+	public void setFechaApertura(LocalDate fechaApertura) {
 		this.fechaApertura = fechaApertura;
 	}
 
-	protected String getIban() {
+	public String getIban() {
 		return iban;
 	}
 
-	protected void setIban(String iban) {
+	public void setIban(String iban) {
 		this.iban = iban;
 	}
 
-	protected Cliente getClienteTitular() {
+	public Cliente getClienteTitular() {
 		return clienteTitular;
 	}
 
-	protected void setClienteTitular(Cliente clienteTitular) {
+	public void setClienteTitular(Cliente clienteTitular) {
 		this.clienteTitular = clienteTitular;
 	}
 
-	protected Cliente getClienteAutorizado() {
+	public Cliente getClienteAutorizado() {
 		return clienteAutorizado;
 	}
 
-	protected void setClienteAutorizado(Cliente clienteAutorizado) {
+	public void setClienteAutorizado(Cliente clienteAutorizado) {
 		this.clienteAutorizado = clienteAutorizado;
 	}
 
-	protected static int getContador() {
+	public static int getContador() {
 		return contador;
 	}
 
-	protected static void setContador(int contador) {
+	public static void setContador(int contador) {
 		CuentaBanco.contador = contador;
 	}
 }

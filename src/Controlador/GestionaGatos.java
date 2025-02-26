@@ -1,6 +1,8 @@
-package POO;
+package Controlador;
 
 import java.util.Scanner;
+
+import POO.Gato;
 
 public class GestionaGatos {
 

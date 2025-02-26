@@ -3,18 +3,18 @@ package POO;
 import java.util.Scanner;
 
 public class Producto {
-	String nombre;
-	int unidades;
-	float precioVenta;
+	private String nombre;
+	private int unidades;
+	private float precioVenta;
 
 	String convierteCadena() {
-		String cadena = "Nombre: " + nombre + " Unidades: " + unidades + "precio de venta: " + precioVenta;
+		String cadena = "Nombre: " + getNombre() + " Unidades: " + getUnidades() + "precio de venta: " + getPrecioVenta();
 		return cadena;
 	}
 
-	Boolean PedirUnidades() {
+	public Boolean PedirUnidades() {
 		boolean pedir = true;
-		if (unidades < 3) {
+		if (getUnidades() < 3) {
 			pedir = true;
 		}
 
@@ -24,26 +24,50 @@ public class Producto {
 		return pedir;
 	}
 	
-	int aumentaUnds(Producto n1, boolean pedir) {
+	public int aumentaUnds(Producto n1, boolean pedir) {
 		int nuevasUnd = 0;
 		Scanner entrada = new Scanner(System.in);
 		if (pedir=true) {
 			System.out.println("Introduce cuántas unidades quieres: ");
 			nuevasUnd = entrada.nextInt();
-			nuevasUnd = n1.unidades + nuevasUnd;
+			nuevasUnd = n1.getUnidades() + nuevasUnd;
 			entrada.close();
 		}
 		
 		else {
-			nuevasUnd = n1.unidades + nuevasUnd;
+			nuevasUnd = n1.getUnidades() + nuevasUnd;
 		}
 		return nuevasUnd;
 	}
 
 	
-	String pasoCadena(int unidades2) {
+	public String pasoCadena(int unidades2) {
 		String cadena= "" + unidades2;
 		return cadena;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public float getPrecioVenta() {
+		return precioVenta;
+	}
+
+	public void setPrecioVenta(float precioVenta) {
+		this.precioVenta = precioVenta;
+	}
+
+	public int getUnidades() {
+		return unidades;
+	}
+
+	public void setUnidades(int unidades) {
+		this.unidades = unidades;
 	}
 }
 

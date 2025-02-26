@@ -1,11 +1,11 @@
 package POO;
 
 public class Gato {
-	String color;
+	public String color;
 	String raza;
-	String sexo;
-	int edad;
-	float peso;
+	public String sexo;
+	public int edad;
+	public float peso;
 	String comida;
 	
 
@@ -28,7 +28,7 @@ public class Gato {
 	
 	
 	
-	void maulla() {
+	public void maulla() {
 		System.out.println("miuauuuuu");
 	}
 
@@ -47,12 +47,12 @@ public class Gato {
 		// TODO Auto-generated constructor stub
 	}
 
-	void ronronea() {
+	public void ronronea() {
 
 		System.out.println("rrrr");
 	}
 
-	void come(String comida) {
+	public void come(String comida) {
 		if (comida.equals("pescado")) {
 			System.out.println("Yummy Yummy");
 		} else {
@@ -61,7 +61,7 @@ public class Gato {
 	}
 
 	
-	void pelear(Gato g) {
+	public void pelear(Gato g) {
 		if (sexo.equals(g.sexo)) {
 			System.out.println("ven aquí que te vas a enterar");
 		} 

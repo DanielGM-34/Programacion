@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Equipo {
 	String nombreEquipo;
 	int[] puntuaciones;
-	Persona[] personas;
+	public Persona[] personas;
 
 	@Override
 	public String toString() {
@@ -20,7 +20,7 @@ public class Equipo {
 		this.personas = personas;
 	}
 
-	float calculaMedia() {
+	public float calculaMedia() {
 		float mediaEdad = 0f;
 		float edades = 0;
 		Persona[] tablaPersona = this.personas;
