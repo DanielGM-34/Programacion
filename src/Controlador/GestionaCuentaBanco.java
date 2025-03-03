@@ -26,4 +26,4 @@ public class GestionaCuentaBanco {
 		System.out.println(CuentaBanco.getContador());
 
 	}
-}
+} 
