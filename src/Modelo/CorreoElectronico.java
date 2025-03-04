@@ -5,6 +5,7 @@ public class CorreoElectronico {
 	private String dominio;
 
 	public CorreoElectronico(String correoCompleto) {
+		super();
 		String[] partes = correoCompleto.split("@");
 		this.nombre = partes[0];
 		this.dominio = partes[1];

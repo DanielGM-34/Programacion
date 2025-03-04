@@ -6,5 +6,4 @@ public class Clase1 {
 		CompruebaVisibilidad clase1= new CompruebaVisibilidad(98, 556, 65, 999);
 		System.out.println(clase1);
 	}
-
 }
