@@ -33,8 +33,12 @@ public class Canario extends Aves {
 
 	@Override
 	public boolean volar() {
-		// TODO Auto-generated method stub
-		return super.volar();
+		return true;
 	}
-	
+
+	@Override
+	public boolean habla() {
+		return false;
+	}
+
 }

@@ -44,11 +44,9 @@ public class Perro1 extends Mascota {
 		if (pulgas == true) {
 			tiene = true;
 		}
-
 		else {
 			tiene = false;
 		}
 		return tiene;
 	}
-
 }

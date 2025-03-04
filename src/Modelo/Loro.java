@@ -35,7 +35,18 @@ public class Loro extends Aves {
 
 	@Override
 	public boolean volar() {
-		// TODO Auto-generated method stub
-		return super.volar();
+		return true;
 	}
+
+	@Override
+	public boolean habla() {
+		return true;
+	}
+
+	public void saludar() {
+		System.out.println("Holaa");
+	}
+	
+	
+
 }

@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Aves {
+public abstract class Aves {
 	private boolean pico;
 	private boolean vuela;
 
@@ -26,13 +26,7 @@ public class Aves {
 		this.vuela = vuela;
 	}
 
-	public boolean volar() {
-		boolean volar = true;
-		if (this.isVuela() == true) {
-			volar = true;
-		} else {
-			volar = false;
-		}
-		return volar;
-	}
+	public abstract boolean volar();
+
+	public abstract boolean habla(); 
 }

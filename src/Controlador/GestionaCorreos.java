@@ -8,12 +8,12 @@ public class GestionaCorreos {
 		Scanner entrada = new Scanner(System.in);
 		CorreoElectronico[] correos = new CorreoElectronico[5];
 		int contador = 0;
-
 		while (contador != 5) {
 			System.out.println("Introduce un correo: ");
 			String correo = entrada.nextLine();
+			boolean valida = CorreoElectronico.esCorreoValido(correo);
 
-			if (CorreoElectronico.esCorreoValido(correo)) {
+			if (valida) {
 				CorreoElectronico c = new CorreoElectronico(correo);
 				correos[contador] = c;
 				System.out.println("Correo válido: " + c);
