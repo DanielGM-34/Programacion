@@ -72,6 +72,13 @@ public abstract class Dispositivo {
 
 	public abstract boolean pendienteActualización();
 
-	public abstract void apagar();
+	public void apagar() {
+		this.setEstado(estado.OFF);
+	}
+
+	@Override
+	public String toString() {
+		return "Dispositivo [id=" + id + ", mac=" + mac + ", estado=" + estado + ", fecha=" + fecha + "]";
+	};
 
 }

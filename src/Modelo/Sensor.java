@@ -20,20 +20,14 @@ public class Sensor extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Se conectan usando WPA y se deben de actualizar cada 3 meses");
 	}
 
 	@Override
 	public boolean pendienteActualización() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+		LocalDate fechaHoy = LocalDate.now();
 
-	@Override
-	public void apagar() {
-		// TODO Auto-generated method stub
-		
+		return getFecha().plusMonths(3).isBefore(fechaHoy) || getFecha().plusMonths(3).isEqual(fechaHoy);
 	}
 
 }

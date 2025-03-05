@@ -11,20 +11,13 @@ public class Camara extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		// TODO Auto-generated method stub
+		System.out.println("Se conectan usando WPA3 y se deben de actualizar cada 14 días");
 
 	}
 
 	@Override
 	public boolean pendienteActualización() {
-		// TODO Auto-generated method stub
-		return false;
+		LocalDate fechaHoy = LocalDate.now();
+		return getFecha().plusDays(14).isBefore(fechaHoy) || getFecha().plusDays(14).isEqual(fechaHoy);
 	}
-
-	@Override
-	public void apagar() {
-		// TODO Auto-generated method stub
-
-	}
-
 }

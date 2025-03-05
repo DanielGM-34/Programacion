@@ -11,20 +11,14 @@ public class Puerta extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		// TODO Auto-generated method stub
+		System.out.println("Se conectan usando WPA y se deben de actualizar cada mes");
 
 	}
 
 	@Override
 	public boolean pendienteActualización() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void apagar() {
-		// TODO Auto-generated method stub
-
+		LocalDate fechaHoy = LocalDate.now();
+		return getFecha().plusDays(30).isBefore(fechaHoy) || getFecha().plusDays(30).isEqual(fechaHoy);
 	}
 
 }
