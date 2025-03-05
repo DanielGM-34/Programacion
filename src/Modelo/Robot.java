@@ -13,14 +13,14 @@ public abstract class Robot {
 
 	public Robot(String nombre, int bateria, Estado estado, String combustible, String descripcion) {
 		super();
-		this.identificador = contador + 1;
+		this.identificador = contador;
 		this.nombre = nombre;
 		setBateria(bateria);
 		this.estado = estado;
 		this.combustible = combustible;
 		this.descripcion = descripcion;
 		contador = contador + 1;
-	} 
+	}
 
 	public static int getContador() {
 		return contador;
@@ -51,15 +51,13 @@ public abstract class Robot {
 	}
 
 	public void setBateria(int bateria) {
-
 		if (bateria > 10) {
-			System.out.println("Tiene bateria suficiente.");
+			System.out.println("Tiene batería suficiente.");
 			this.bateria = bateria;
 		} else {
-			System.out.println("No hay bateria suficiente.");
-			this.bateria = bateria;
+			System.out.println("No hay batería suficiente.");
+			this.bateria = 10;
 		}
-
 	}
 
 	@Override

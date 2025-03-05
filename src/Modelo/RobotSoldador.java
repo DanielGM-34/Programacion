@@ -29,14 +29,15 @@ public class RobotSoldador extends Robot {
 
 	@Override
 	public String ejecutarTarea() {
-		return toString();
+		String tarea = "realizar soldaduras precisas en la carrocería del automóvil";
+		return tarea;
 	}
 
 	@Override
 	public boolean recargar() {
 		boolean recarga = false;
 		if (this.getEstado() == estado.APAGADO) {
-			System.out.println("Recargando por electricidad." + this.getCombustible());
+			System.out.println("Recargando por " + this.getCombustible());
 			recarga = true;
 		} else {
 			System.out.println("Estoy encendido y no puedo recargar.");
@@ -45,10 +46,9 @@ public class RobotSoldador extends Robot {
 		return recarga;
 	}
 
-	@Override
-	public String toString() {
-		return "RobotSoldador [getEspecificacion()=" + getEspecificacion() + ", getTemperatura()=" + getTemperatura()
-				+ "]";
-	}
-
+	/*
+	 * @Override public String toString() { return
+	 * "RobotSoldador [getEspecificacion()=" + getEspecificacion() +
+	 * ", getTemperatura()=" + getTemperatura() + "]"; }
+	 */
 }
