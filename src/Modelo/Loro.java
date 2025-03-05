@@ -6,6 +6,11 @@ public class Loro extends Aves {
 	private String origen;
 	private boolean habla;
 
+	@Override
+	public String toString() {
+		return "Loro [origen=" + origen + ", habla=" + habla + "]";
+	}
+
 	public String getOrigen() {
 		return origen;
 	}
@@ -38,15 +43,14 @@ public class Loro extends Aves {
 		return true;
 	}
 
+	
+	/*
 	@Override
 	public boolean habla() {
 		return true;
 	}
-
+*/
 	public void saludar() {
-		System.out.println("Holaa");
+		
 	}
-	
-	
-
 }

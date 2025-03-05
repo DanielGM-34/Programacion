@@ -63,7 +63,11 @@ public abstract class Mascota {
 	}
 
 	public boolean morir() {
-		return true;
+		boolean muerto = false;
+		if (2025 - getFechaNacimiento().getYear() > 20) {
+			muerto = true;
+		}
+		return muerto;
 	}
 
 	@Override
@@ -73,6 +77,7 @@ public abstract class Mascota {
 
 	@Override
 	public boolean equals(Object obj) {
+		System.out.println(	this.getClass().getName());//devuelve el paquete);
 		if (this == obj)
 			return true;
 		if (obj == null)

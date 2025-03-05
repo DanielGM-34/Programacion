@@ -25,8 +25,7 @@ public abstract class Aves {
 	public void setVuela(boolean vuela) {
 		this.vuela = vuela;
 	}
-
+	
 	public abstract boolean volar();
 
-	public abstract boolean habla(); 
 }

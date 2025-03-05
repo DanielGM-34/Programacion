@@ -9,16 +9,27 @@ public class GestionaMascotas {
 	public static void main(String[] args) {
 		Mascota p = new Perro1("Pepe", 3, "operado", LocalDate.now(), "dálmata", false);
 		Mascota p2 = new Perro1("Pepe", 3, "operado", LocalDate.now(), "pastor", false);
-		System.out.println(p.equals(p2));
+		Mascota p8 = new Gato1("Pepe", 3, "operado", LocalDate.now(), "pastor", false);
+		
+		
+		int contador=0;
 
-		Mascota lista[] = { p, p2 };
+		Mascota [] animales = new Mascota[10];
+		animales[contador] = p;
+		contador +=1;
+		System.out.println(Arrays.toString(animales));
+
+		System.out.println(p8);
+		System.out.println(p.equals(p2));
+		
+		
 
 		GestionaMascotas ver = new GestionaMascotas();
-		ver.mostrarListaAnimales(lista);
 
 		ver.mostrarListaAnimales("Dani", 56.5, "perro");
 		
 		System.out.println(ver.obtenerInformacionAnimal(p2));
+		System.out.println(p.equals(p2));
 		
 	}
 

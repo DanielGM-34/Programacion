@@ -36,9 +36,11 @@ public class Canario extends Aves {
 		return true;
 	}
 
+	
+	/*
 	@Override
 	public boolean habla() {
 		return false;
 	}
-
+	*/
 }

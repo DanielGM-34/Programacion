@@ -34,6 +34,8 @@ public class Gato1 extends Mascota {
 		// TODO Auto-generated method stub
 		return toString();
 	}
+	
+	
 
 	@Override
 	public boolean habla() {
