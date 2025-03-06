@@ -11,7 +11,7 @@ public class Camara extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		System.out.println("Se conectan usando WPA3 y se deben de actualizar cada 14 días");
+		System.out.println("Se conectan usando WPA3.");
 
 	}
 

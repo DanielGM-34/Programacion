@@ -36,7 +36,7 @@ public class RobotSoldador extends Robot {
 	@Override
 	public boolean recargar() {
 		boolean recarga = false;
-		if (this.getEstado() == estado.APAGADO) {
+		if (this.getEstado() == getEstado().APAGADO) {
 			System.out.println("Recargando por " + this.getCombustible());
 			recarga = true;
 		} else {

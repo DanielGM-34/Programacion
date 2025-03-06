@@ -15,7 +15,7 @@ public class GestionaFactoria {
 		Robot p1 = new RobotPintor("Maria", 20, Estado.ALERTA, "electricidad", "alerta por xrp");
 		System.out.println(p1.recargar());
 
-		Robot p2 = new RobotSoldador("Antonio", 0, Estado.AVERIADO, "electricidad", "pipipi", 20, "poppo");
+		Robot p2 = new RobotSoldador("Antonio", 0, Estado.APAGADO, "electricidad", "pipipi", 20, "poppo");
 		System.out.println(p2.recargar());
 
 		Robot[] inventarioRobots = new Robot[20];
@@ -26,6 +26,10 @@ public class GestionaFactoria {
 				25.0);
 		Dispositivo camara1 = new Camara("00:1A:2B:3C:4D:5E", EstadoDispositivo.AVERIADO, LocalDate.of(2025, 2, 15));
 		Dispositivo puerta1 = new Puerta("00:1A:2B:3C:4D:5E", EstadoDispositivo.ON_SINWIFI, LocalDate.of(2025, 3, 5));
+
+		camara1.apagar();
+		System.out.println(camara1);
+
 		int contador = 0;
 		inventarioRobots[contador++] = p;
 		inventarioRobots[contador++] = p1;
@@ -33,15 +37,12 @@ public class GestionaFactoria {
 		System.out.println(Arrays.toString(inventarioRobots));
 		System.out.println();
 
-		int contador2 = 0;
-
-		inventarioDispositivos[contador2++] = sensor1;
-		inventarioDispositivos[contador2++] = camara1;
-		inventarioDispositivos[contador2++] = puerta1;
+		contador = 0;
+		inventarioDispositivos[contador++] = sensor1;
+		inventarioDispositivos[contador++] = camara1;
+		inventarioDispositivos[contador++] = puerta1;
 
 		System.out.println(Arrays.toString(inventarioDispositivos));
 		System.out.println(camara1.equals(puerta1));
-
 	}
-
 }

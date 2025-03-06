@@ -7,7 +7,7 @@ public abstract class Robot {
 	private int identificador;
 	private String nombre;
 	private int bateria;
-	Estado estado;
+	private Estado estado;
 	private String combustible;
 	private String descripcion;
 

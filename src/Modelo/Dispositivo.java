@@ -67,13 +67,13 @@ public abstract class Dispositivo {
 		Dispositivo other = (Dispositivo) obj;
 		return Objects.equals(mac, other.mac);
 	}
-
+	
 	public abstract void conectarInternet();
 
 	public abstract boolean pendienteActualización();
 
 	public void apagar() {
-		this.setEstado(estado.OFF);
+		this.setEstado(EstadoDispositivo.OFF);
 	}
 
 	@Override

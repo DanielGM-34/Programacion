@@ -11,7 +11,7 @@ public class Puerta extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		System.out.println("Se conectan usando WPA y se deben de actualizar cada mes");
+		System.out.println("Se conectan usando WPA.");
 
 	}
 

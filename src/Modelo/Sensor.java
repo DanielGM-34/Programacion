@@ -20,7 +20,7 @@ public class Sensor extends Dispositivo {
 
 	@Override
 	public void conectarInternet() {
-		System.out.println("Se conectan usando WPA y se deben de actualizar cada 3 meses");
+		System.out.println("Se conectan usando WPA.");
 	}
 
 	@Override
