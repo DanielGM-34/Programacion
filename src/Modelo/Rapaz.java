@@ -2,9 +2,9 @@ package Modelo;
 
 public class Rapaz extends Animal2 {
 
-	public Rapaz(String nombre, Familia tipoFamilia, String habitat, Animal2[] animalComido,
-			Animal2[] animalQueComido) {
-		super(nombre, tipoFamilia, habitat, animalComido, animalQueComido);
+	public Rapaz(String nombre, Familia tipoFamilia, String habitat, Animal2[] animalesQueCome,
+			Animal2[] animalQueHaComido) {
+		super(nombre, tipoFamilia, habitat, animalesQueCome, animalQueHaComido);
 		// TODO Auto-generated constructor stub
 	}
 
