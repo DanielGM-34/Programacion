@@ -1,11 +1,13 @@
 package Modelo;
 
+import java.util.Arrays;
+
 public abstract class Animal2 implements Depredador, Presa {
 	private String nombre;
 	private Familia tipoFamilia;
 	private String habitat;
 	private Animal2[] animalComido;
-	private Animal2[] animalQueComido;
+	private Animal2[] animalQuehEComido;
 
 	public Animal2(String nombre, Familia tipoFamilia, String habitat, Animal2[] animalComido,
 			Animal2[] animalQueComido) {
@@ -14,7 +16,22 @@ public abstract class Animal2 implements Depredador, Presa {
 		this.tipoFamilia = tipoFamilia;
 		this.habitat = habitat;
 		this.animalComido = animalComido;
-		this.animalQueComido = animalQueComido;
+		this.animalQuehEComido = animalQueComido;
+	}
+
+
+	public Animal2() {
+		super();
+		this.setAnimalComido(new Animal2[10]);
+		this.setAnimalQuehEComido((new Animal2[10]));
+	}
+
+	public Animal2[] getAnimalQuehEComido() {
+		return animalQuehEComido;
+	}
+
+	public void setAnimalQuehEComido(Animal2[] animalQuehEComido) {
+		this.animalQuehEComido = animalQuehEComido;
 	}
 
 	public String getNombre() {

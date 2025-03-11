@@ -7,6 +7,14 @@ public class Rapaz extends Animal2 {
 		super(nombre, tipoFamilia, habitat, animalesQueCome, animalQueHaComido);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public Rapaz() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 
 	@Override
 	public boolean huir(Animal2 a) {

@@ -6,6 +6,12 @@ public class Roedor extends Animal2 {
 			Animal2[] animalQueComido) {
 		super(nombre, tipoFamilia, habitat, animalComido, animalQueComido);
 		// TODO Auto-generated constructor stub
+
+	}
+
+	public Roedor() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override

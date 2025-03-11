@@ -6,6 +6,13 @@ public class Serpiente extends Animal2 {
 		super(nombre, tipoFamilia, habitat, animalComido, animalQueComido);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public Serpiente() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public boolean huir(Animal2 a) {
