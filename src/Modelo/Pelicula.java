@@ -2,9 +2,14 @@ package Modelo;
 
 public class Pelicula extends ElementosMultimedia{
 
-	public Pelicula(int id, String ubicacion, String nombre, String genero) {
-		super(id, ubicacion, nombre, genero);
-		// TODO Auto-generated constructor stub
+	public Pelicula(String ubicacion, String nombre, String genero) {
+		super(ubicacion, nombre, genero);
+		}
+
+	@Override
+	public int duracion() {
+		int duracionPeli=0;
+		return duracionPeli;
 	}
 
 }

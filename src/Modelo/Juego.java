@@ -2,9 +2,15 @@ package Modelo;
 
 public class Juego  extends ElementosMultimedia{
 
-	public Juego(int id, String ubicacion, String nombre, String genero) {
-		super(id, ubicacion, nombre, genero);
+	public Juego(String ubicacion, String nombre, String genero) {
+		super(ubicacion, nombre, genero);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public int duracion() {
+		int numFase=0;
+		return numFase;
 	}
 
 }

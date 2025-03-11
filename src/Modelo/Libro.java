@@ -1,14 +1,13 @@
 package Modelo;
 
 public class Libro extends Recurso {
-
 	private String autor;
 	private String editorial;
 	private String generoLiterario;
 	private int diasPrestamo;
 
-	public Libro(int id, String ubicacion, String autor, String editorial, String generoLiterario) {
-		super(id, ubicacion);
+	public Libro(String ubicacion, String autor, String editorial, String generoLiterario) {
+		super(ubicacion);
 		this.autor = autor;
 		this.editorial = editorial;
 		this.generoLiterario = generoLiterario;
@@ -51,7 +50,7 @@ public class Libro extends Recurso {
 	@Override
 	public boolean estaDisponible() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

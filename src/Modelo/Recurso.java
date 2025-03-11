@@ -31,7 +31,7 @@ public abstract class Recurso implements IPrestable {
 		this.ubicacion = ubicacion;
 	}
 
-	public Recurso(int id, String ubicacion) {
+	public Recurso(String ubicacion) {
 		super();
 		this.id = contador;
 		this.ubicacion = ubicacion;

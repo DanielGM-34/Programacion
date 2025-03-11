@@ -1,6 +1,6 @@
 package Modelo;
 
-public class ElementosMultimedia extends Recurso {
+public abstract class ElementosMultimedia extends Recurso {
 	private String nombre;
 	private String genero;
 	private int diasPrestamo;
@@ -29,8 +29,8 @@ public class ElementosMultimedia extends Recurso {
 		this.diasPrestamo = diasPrestamo;
 	}
 
-	public ElementosMultimedia(int id, String ubicacion, String nombre, String genero) {
-		super(id, ubicacion);
+	public ElementosMultimedia(String ubicacion, String nombre, String genero) {
+		super(ubicacion);
 		this.nombre = nombre;
 		this.genero = genero;
 		this.diasPrestamo = 10;
@@ -39,7 +39,7 @@ public class ElementosMultimedia extends Recurso {
 	@Override
 	public boolean estaDisponible() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
@@ -47,5 +47,7 @@ public class ElementosMultimedia extends Recurso {
 		// TODO Auto-generated method stub
 		return this.getDiasPrestamo();
 	}
+
+	public abstract int duracion();
 
 }
