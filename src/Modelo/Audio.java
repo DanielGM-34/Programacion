@@ -1,16 +1,30 @@
 package Modelo;
 
 public class Audio extends ElementosMultimedia {
+	private int duracion;
 
-	public Audio(String ubicacion, String nombre, String genero) {
+	public int getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
+	}
+
+	public Audio(String ubicacion, String nombre, String genero, int duracion) {
 		super(ubicacion, nombre, genero);
-		// TODO Auto-generated constructor stub
+		this.duracion = duracion;
 	}
 
 	@Override
 	public int duracion() {
-		int audio=0;
-		return audio;
+		return this.duracion;
+	}
+
+	@Override
+	public boolean estaDisponible() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

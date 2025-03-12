@@ -14,7 +14,6 @@ public class Libro extends Recurso {
 		this.diasPrestamo = 21;
 	}
 
-
 	public String getAutor() {
 		return autor;
 	}

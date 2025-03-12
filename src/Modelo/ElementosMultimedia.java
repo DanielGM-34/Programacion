@@ -37,17 +37,10 @@ public abstract class ElementosMultimedia extends Recurso {
 	}
 
 	@Override
-	public boolean estaDisponible() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
 	public int getDevuelveDiasPrestamo() {
 		// TODO Auto-generated method stub
 		return this.getDiasPrestamo();
 	}
 
 	public abstract int duracion();
-
 }
