@@ -1,20 +1,31 @@
 package Modelo;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
-public class Pescado extends Producto implements IAlimento {
+public class Pescado extends Producto implements IAlimento{
 	private String origen;
-	private double peso;
 	private int duracion;
 	private TipoPescado tipoDePescado;
+	private LocalDate fechaCaducidad;
+	private static final int IVA=7;
 
 	public Pescado(int identificador, String nombre, String descripcion, double peso, float precioVenta,
-			float precioCompra, String origen, double peso2, int duracion, TipoPescado tipoDePescado) {
+			float precioCompra, String origen, double peso2, int duracion, TipoPescado tipoDePescado,
+			LocalDate fechaCaducidad) {
 		super(identificador, nombre, descripcion, peso, precioVenta, precioCompra);
 		this.origen = origen;
 		peso = peso2;
 		this.duracion = duracion;
 		this.tipoDePescado = tipoDePescado;
+		this.fechaCaducidad = fechaCaducidad;
+	}
+
+	public LocalDate getFechaCaducidad() {
+		return fechaCaducidad;
+	}
+
+	public void setFechaCaducidad(LocalDate fechaCaducidad) {
+		this.fechaCaducidad = fechaCaducidad;
 	}
 
 	protected String getOrigen() {
@@ -25,13 +36,6 @@ public class Pescado extends Producto implements IAlimento {
 		this.origen = origen;
 	}
 
-	protected double getPeso() {
-		return peso;
-	}
-
-	protected void setPeso(double peso) {
-		this.peso = peso;
-	}
 
 	protected int getDuracion() {
 		return duracion;
@@ -49,40 +53,31 @@ public class Pescado extends Producto implements IAlimento {
 		this.tipoDePescado = tipoDePescado;
 	}
 
+	
 	@Override
-	public double calcularPrecioSinIva(double precioProducto) {
-		return precioProducto - (precioProducto * (7 / 100));
+	public void setCaducidad(LocalDate fecha) {
+		this.fechaCaducidad = fechaCaducidad;
+
 	}
 
 	@Override
-	public double calcularPrecioConIva(double precioProducto) {
-		// TODO Auto-generated method stub
-		return precioProducto + (precioProducto * (7 / 100));
-	}
-
-	@Override
-	public void setCaducidad(Date fecha) {
-	}
-
-	@Override
-	public Date getCaducidad() {
-		// TODO Auto-generated method stub
-		return null;
+	public LocalDate getCaducidad() {
+		return fechaCaducidad;
 	}
 
 	@Override
 	public double getCalorias() {
 		double calorias = 0;
-		if (this.tipoDePescado == TipoPescado.blanco) {
-			calorias = this.peso * 3;
+		if (this.tipoDePescado == TipoPescado.BLANCO) {
+			calorias = this.getPeso() * 3;
 		}
 
-		else if (this.tipoDePescado == TipoPescado.azul) {
-			calorias = this.peso * 2;
+		else if (this.tipoDePescado == TipoPescado.AZUL) {
+			calorias = this.getPeso() * 2;
 		}
 
-		else if (this.tipoDePescado == TipoPescado.marisco) {
-			calorias = this.peso * 1;
+		else if (this.tipoDePescado == TipoPescado.MARISCO) {
+			calorias = this.getPeso() * 1;
 		}
 		return calorias;
 	}

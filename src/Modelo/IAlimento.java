@@ -1,11 +1,12 @@
 package Modelo;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public interface IAlimento {
-	public void setCaducidad(Date fecha);
+	public void setCaducidad(LocalDate fecha);
 
-	public Date getCaducidad();
+	public LocalDate getCaducidad();
 
 	public double getCalorias();
 

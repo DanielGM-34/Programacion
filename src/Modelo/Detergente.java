@@ -4,14 +4,27 @@ public class Detergente extends Producto implements ILiquido, IDescuento {
 	private String marca;
 	private TipoDetergente tipoDet;
 	private TipoRopa tipoRopa;
+	private float descuento;
+	private double volumen;
+	private String tipoEnvase;
+	private final int iva;
+
+	
 
 	public Detergente(int identificador, String nombre, String descripcion, double peso, float precioVenta,
-			float precioCompra, String marca, TipoDetergente tipoDet, TipoRopa tipoRopa) {
+			float precioCompra, String marca, TipoDetergente tipoDet, TipoRopa tipoRopa, float descuento,
+			double volumen, String tipoEnvase, int iva) {
 		super(identificador, nombre, descripcion, peso, precioVenta, precioCompra);
 		this.marca = marca;
 		this.tipoDet = tipoDet;
 		this.tipoRopa = tipoRopa;
+		this.descuento = descuento * this.getPrecioVenta() /100;
+		this.volumen = volumen;
+		this.tipoEnvase = tipoEnvase;
+		this.iva = 21;
 	}
+
+
 
 	protected String getMarca() {
 		return marca;
@@ -37,19 +50,10 @@ public class Detergente extends Producto implements ILiquido, IDescuento {
 		this.tipoRopa = tipoRopa;
 	}
 
-	@Override
-	public double calcularPrecioSinIva(double precioProducto) {
-		return precioProducto - (precioProducto * (21 / 100));
-	}
-
-	@Override
-	public double calcularPrecioConIva(double precioProducto) {
-		// TODO Auto-generated method stub
-		return precioProducto + (precioProducto * (21 / 100));
-	}
 
 	@Override
 	public void setVolumen(double v) {
+		this.volumen = v;
 		// TODO Auto-generated method stub
 
 	}
@@ -57,37 +61,34 @@ public class Detergente extends Producto implements ILiquido, IDescuento {
 	@Override
 	public double getVolumen() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.volumen;
 	}
 
 	@Override
 	public void setTipoEnvase(String env) {
-		// TODO Auto-generated method stub
+		this.tipoEnvase = env;
 
 	}
 
 	@Override
 	public String getTipoEnvase() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.tipoEnvase;
 	}
 
 	@Override
 	public void setDescuento(double des) {
-		// TODO Auto-generated method stub
-
+		this.descuento = descuento;
 	}
 
 	@Override
 	public double getDescuento() {
-		// TODO Auto-generated method stub
-		return 0;
+		return descuento;
 	}
 
 	@Override
 	public double getPrecioDescuento() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getPrecioVenta() - this.descuento * this.getPrecioVenta();
 	}
 
 }

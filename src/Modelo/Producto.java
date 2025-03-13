@@ -1,6 +1,6 @@
 package Modelo;
 
-public abstract class Producto {
+public  class Producto {
 	private int identificador;
 	private String nombre;
 	private String descripcion;
@@ -73,7 +73,5 @@ public abstract class Producto {
 		this.precioCompra = precioCompra;
 	}
 	
-	public abstract double calcularPrecioSinIva(double precioProducto);
-	public abstract double calcularPrecioConIva(double precioProducto);
 
 }

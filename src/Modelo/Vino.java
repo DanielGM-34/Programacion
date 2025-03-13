@@ -1,12 +1,15 @@
 package Modelo;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Vino extends Producto implements ILiquido, IAlimento, IDescuento {
 	private String marca;
 	private TipoVino tipoDeVino;
 	private int gradosDeAlcohol;
 	private double precio;
+	private String tipoEnvase;
+	private double precioDescuento;
+	private int volumen;
 
 	public Vino(int identificador, String nombre, String descripcion, double peso, float precioVenta,
 			float precioCompra, String marca, TipoVino tipoDeVino, int gradosDeAlcohol, double precio) {
@@ -28,7 +31,7 @@ public class Vino extends Producto implements ILiquido, IAlimento, IDescuento {
 	protected TipoVino getTipoDeVino() {
 		return tipoDeVino;
 	}
-
+ 
 	protected void setTipoDeVino(TipoVino tipoDeVino) {
 		this.tipoDeVino = tipoDeVino;
 	}
@@ -50,13 +53,13 @@ public class Vino extends Producto implements ILiquido, IAlimento, IDescuento {
 	}
 
 	@Override
-	public void setCaducidad(Date fecha) {
+	public void setCaducidad(LocalDate fecha) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Date getCaducidad() {
+	public LocalDate getCaducidad() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -82,38 +85,27 @@ public class Vino extends Producto implements ILiquido, IAlimento, IDescuento {
 
 	@Override
 	public void setTipoEnvase(String env) {
+		this.tipoEnvase=env;
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public String getTipoEnvase() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.tipoEnvase;
 	}
 
-	@Override
-	public double calcularPrecioSinIva(double precioProducto) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
-	@Override
-	public double calcularPrecioConIva(double precioProducto) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public void setDescuento(double des) {
+		this.precioDescuento=des;
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public double getDescuento() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.precioDescuento;
 	}
 
 	@Override
