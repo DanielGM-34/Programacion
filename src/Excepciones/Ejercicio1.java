@@ -13,7 +13,5 @@ public class Ejercicio1 {
 		}
 		System.out.println("Llego aquí");
 		// TODO Auto-generated method stub
-
 	}
-
 }
