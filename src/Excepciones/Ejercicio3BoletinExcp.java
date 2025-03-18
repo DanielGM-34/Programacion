@@ -1,6 +1,5 @@
 package Excepciones;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio3BoletinExcp {
@@ -13,15 +12,15 @@ public class Ejercicio3BoletinExcp {
 		int[] listaNum = new int[numMax];
 
 		for (int i = 0; i < listaNum.length; i++) {
-			listaNum[i] = entrada.nextInt();
-			System.out.println(listaNum[i]);
 
 			if (listaNum[i] >= 0) {
 				try {
+					listaNum[i] = entrada.nextInt();
+					System.out.println(listaNum[i]);
 					throw new ArithmeticException();
-				} catch (ArithmeticException p) {
-					System.out.println("En el catch de InputMismatchException");
-					throw p;
+				} catch (ArithmeticException numPos) {
+					System.out.println("Número mayor o igual a 0.");
+					throw numPos;
 				}
 			}
 		}
