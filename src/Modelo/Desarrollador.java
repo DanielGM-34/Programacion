@@ -28,14 +28,21 @@ public class Desarrollador extends AEmpleado {
 
 	@Override
 	public void imprimeHorario() {
-		// TODO Auto-generated method stub
+		if (isTieneReduccionHoraria() == true) {
+			System.out.println(" Jornada 1: Turno de 8:00 a 14:00");
+			System.out.println(" Jornada 2: Turno de 16:00 a 22:00");
+		}
 
+		else {
+			System.out.println(" Jornada 1: Turno de 8:00 a 16:00");
+			System.out.println(" Jornada 2: Turno de 16:00 a 00:00");
+
+		}
 	}
 
 	@Override
 	public float calculaImporteNomina() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (this.getLenguajes().length * 0.01F + this.getFrameworks().length * 0.03F);
 	}
 
 }

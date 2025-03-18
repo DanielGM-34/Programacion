@@ -23,20 +23,33 @@ public class JefeProyecto extends AEmpleado implements INomina {
 
 	@Override
 	public String[] devuelveFunciones() {
-		String[] funciones = { "codificar", "diseñar planes de pruebas", "ejecutarlos" };
+		String[] funciones = { "planificar", "asegurar la calidad y entrega de plazos", "reporting",
+				"elaboración de ofertas" };
 		return funciones;
 	}
 
 	@Override
 	public void imprimeHorario() {
-		// TODO Auto-generated method stub
+		if (isTieneReduccionHoraria() == true) {
+			System.out.println(" Jornada 1: Turno de 8:00 a 16:00");
+		}
 
+		else {
+			System.out.println(" Jornada 1: Turno de 8:00 a 19:00");
+
+		}
 	}
 
 	@Override
 	public float calculaImporteNomina() {
-		// TODO Auto-generated method stub
-		return 0;
+		float nomina = 0;
+		if (this.isHablaIngles() == true) {
+			nomina = getCertificaciones().length * 0.05F + 0.3F;
+		} else {
+			nomina = getCertificaciones().length * 0.05F;
+		}
+
+		return nomina;
 	}
 
 	public JefeProyecto() {
