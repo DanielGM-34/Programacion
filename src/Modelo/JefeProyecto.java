@@ -30,7 +30,7 @@ public class JefeProyecto extends AEmpleado implements INomina {
 
 	@Override
 	public void imprimeHorario() {
-		if (isTieneReduccionHoraria() == true) {
+		if (isTieneReduccionHoraria()) {
 			System.out.println(" Jornada 1: Turno de 8:00 a 16:00");
 		}
 
@@ -43,12 +43,11 @@ public class JefeProyecto extends AEmpleado implements INomina {
 	@Override
 	public float calculaImporteNomina() {
 		float nomina = 0;
-		if (this.isHablaIngles() == true) {
-			nomina = getCertificaciones().length * 0.05F + 0.3F;
+		if (this.isHablaIngles()) {
+			nomina = this.getSalario() + (this.calculaElementosDeUnaTabla(certificaciones) * 0.05F + 0.3F);
 		} else {
-			nomina = getCertificaciones().length * 0.05F;
+			nomina = this.getSalario() + (this.calculaElementosDeUnaTabla(certificaciones) * 0.05F);
 		}
-
 		return nomina;
 	}
 

@@ -28,7 +28,7 @@ public class Desarrollador extends AEmpleado {
 
 	@Override
 	public void imprimeHorario() {
-		if (isTieneReduccionHoraria() == true) {
+		if (isTieneReduccionHoraria()) {
 			System.out.println(" Jornada 1: Turno de 8:00 a 14:00");
 			System.out.println(" Jornada 2: Turno de 16:00 a 22:00");
 		}
@@ -40,9 +40,16 @@ public class Desarrollador extends AEmpleado {
 		}
 	}
 
+	public Desarrollador(String[] lenguajes, String[] frameworks) {
+		super();
+		this.lenguajes = lenguajes;
+		this.frameworks = frameworks;
+	}
+
 	@Override
 	public float calculaImporteNomina() {
-		return (this.getLenguajes().length * 0.01F + this.getFrameworks().length * 0.03F);
+		return this.getSalario() + ((this.calculaElementosDeUnaTabla(lenguajes) * 0.01F)
+				+ this.calculaElementosDeUnaTabla(frameworks) * 0.03F);
 	}
 
 }

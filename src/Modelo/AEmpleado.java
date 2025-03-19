@@ -2,7 +2,7 @@ package Modelo;
 
 import java.util.Objects;
 
-public abstract class AEmpleado implements INomina{
+public abstract class AEmpleado implements INomina {
 	private String nombre;
 	private String identificador;
 	private String apellidos;
@@ -58,6 +58,10 @@ public abstract class AEmpleado implements INomina{
 		this.tieneReduccionHoraria = tieneReduccionHoraria;
 	}
 
+	public AEmpleado() {
+		super();
+	}
+
 	public AEmpleado(String nombre, String identificador, String apellidos, float salario,
 			boolean tieneReduccionHoraria, Categoria categoria) {
 		super();
@@ -73,10 +77,6 @@ public abstract class AEmpleado implements INomina{
 
 	public abstract void imprimeHorario();
 
-	public AEmpleado() {
-		super();
-	}
-
 	@Override
 	public String toString() {
 		return "AEmpleado [nombre=" + nombre + ", identificador=" + identificador + ", salario=" + salario + "]";
@@ -85,6 +85,17 @@ public abstract class AEmpleado implements INomina{
 	@Override
 	public int hashCode() {
 		return Objects.hash(identificador);
+	}
+
+	protected int calculaElementosDeUnaTabla(String[] tabla) {
+		int contador = 0;
+		for (int i = 0; i < tabla.length; i++) {
+			if (tabla[i] != null) {
+				contador = contador + 1;
+			}
+
+		}
+		return contador;
 	}
 
 	@Override
@@ -98,13 +109,5 @@ public abstract class AEmpleado implements INomina{
 		AEmpleado other = (AEmpleado) obj;
 		return Objects.equals(identificador, other.identificador);
 	}
-
-	@Override
-	public float calculaImporteNomina() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	
 
 }
