@@ -17,7 +17,7 @@ public abstract class VehiculoGeneral implements IAlquilable {
 		this.alquilado = alquilado;
 	}
 
-	public abstract double totalGenerado();
+	// public abstract double totalGenerado();
 
 	public String getId() {
 		return id;
@@ -41,5 +41,16 @@ public abstract class VehiculoGeneral implements IAlquilable {
 
 	public void setAlquilado(boolean alquilado) {
 		this.alquilado = alquilado;
+	}
+
+	public double totalGenerado() {
+		double importeTotal = 0;
+		for (Alquiler a : getAlquileres()) {
+			if (a.getEstado().equals(a.getEstado().ENTREGADO) || a.equals(a.getEstado().CERRADO)) {
+
+			}
+		}
+		return importeTotal;
+
 	}
 }

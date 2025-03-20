@@ -38,4 +38,12 @@ public class VehiculosCombustible {
 		this.modelo = modelo;
 	}
 
+	public VehiculosCombustible(String matricula, boolean esDiesel, String marca, String modelo) {
+		super();
+		this.matricula = matricula;
+		this.esDiesel = esDiesel;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+
 }

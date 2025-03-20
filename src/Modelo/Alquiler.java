@@ -7,7 +7,16 @@ public class Alquiler {
 	private String numPermiso;
 	private LocalDate fechaEntrega;
 	private LocalDate fechaAlquiler;
-	
+	private VehiculoGeneral vehiculo;
+
+	public VehiculoGeneral getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(VehiculoGeneral vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
 	private int numDias;
 	private EstadoAlquiler estado;
 
@@ -45,7 +54,7 @@ public class Alquiler {
 
 	public int getNumDias() {
 		return numDias;
-	} 
+	}
 
 	public void setNumDias(int numDias) {
 		this.numDias = numDias;
@@ -68,6 +77,26 @@ public class Alquiler {
 		this.fechaAlquiler = fechaAlquiler;
 		this.numDias = numDias;
 		this.estado = estado;
+	}
+
+	public double getPrecioPorDias() {
+		return numDias;
+	}
+
+	public double getImporteGeneradoPorDia() {
+		int diasAlquiler = this.numDias;
+		double importe = 0;
+		double precioPorDia = 0;
+
+		if (this.vehiculo instanceof Patinete) {
+			importe = getPrecioPorDias() + 30 * (numDias - 1);
+		}
+		
+		//TO DO 
+		
+		
+		return importe;
+
 	}
 
 }

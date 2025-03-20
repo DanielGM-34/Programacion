@@ -60,16 +60,7 @@ public class Patinete extends VehiculoGeneral {
 	public boolean getEstadoAbonadaFianza() {
 		return this.abonada;
 	}
- 
-	@Override
-	public double precioPorDia() {
-		return 0;
-	}
 
-	@Override
-	public double totalGenerado() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 }
