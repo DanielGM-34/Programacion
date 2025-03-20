@@ -1,6 +1,7 @@
 package Modelo.Deportistas;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Prueba {
 	private int id;
@@ -10,7 +11,7 @@ public class Prueba {
 	public int getId() {
 		return id;
 	}
-	
+
 	public Prueba(int id, LocalDate fecha, EstadoPrueba estado) {
 		super();
 		this.id = id;
@@ -26,6 +27,22 @@ public class Prueba {
 		return fecha;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+	    if (this == obj)
+	        return true;
+	    if (obj == null || getClass() != obj.getClass())
+	        return false;
+	    Prueba other = (Prueba) obj;
+	    return id == other.id && fecha.equals(other.fecha) && estado == other.estado;
+	}
+
+
 	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
@@ -36,5 +53,10 @@ public class Prueba {
 
 	public void setEstado(EstadoPrueba estado) {
 		this.estado = estado;
+	}
+
+	@Override
+	public String toString() {
+		return "Prueba [id=" + id + ", fecha=" + fecha + ", estado=" + estado + "]";
 	}
 }
