@@ -1,5 +1,7 @@
 package Modelo.Deportistas;
 
+import java.time.LocalDate;
+
 public class Corredor extends Deportista {
 
 	public Corredor(String nombre, String pais, int edad, double peso, double altura, Prueba[] pruebas) {
@@ -20,10 +22,16 @@ public class Corredor extends Deportista {
 	}
 
 	@Override
-	public double getCaloriasNecesarias(double peso) {
-		double kcal = peso * 50;
+	public double getCaloriasNecesarias() {
+		double kcal = this.getPeso() * 50;
 
 		return kcal;
+	}
+
+	@Override
+	public double getTiempoPrueba(LocalDate fechaCal) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

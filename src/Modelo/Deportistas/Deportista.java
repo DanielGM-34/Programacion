@@ -17,7 +17,7 @@ public abstract class Deportista implements ICompeticion {
 		this.edad = edad;
 		this.peso = peso;
 		this.altura = altura;
-		this.pruebas = pruebas;
+		this.pruebas = new Prueba[50];
 	}
 
 	public String getNombre() {
@@ -39,7 +39,7 @@ public abstract class Deportista implements ICompeticion {
 	public int getEdad() {
 		return edad;
 	}
- 
+
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
@@ -69,16 +69,41 @@ public abstract class Deportista implements ICompeticion {
 	}
 
 	public abstract void competir();
-	
+
 	public abstract int getTiempoCalentamiento();
-	
-	public abstract double getCaloriasNecesarias(double peso);
 
-	
-	
+	public abstract double getCaloriasNecesarias();
 
-	@Override
-	public double getTiempoPrueba(LocalDate fechaCal) {
-		return LocalDate.now().getDayOfYear() - fechaCal.getDayOfYear();
+	public int getHorasEntrenamiento(LocalDate fechaCal) {
+		int diasEntrenamiento = LocalDate.now().getDayOfYear() - fechaCal.getDayOfYear();
+		return diasEntrenamiento;
+	}
+
+	public Prueba getPruebaMasCercana() {
+		Prueba p = pruebas[0];
+		for (int i = 0; i < pruebas.length; i++) {
+			if (p != null && pruebas[i] != null && pruebas[i].equals(EstadoPrueba.PLANIFICADA)) {
+				int diasMinimo = p.getFecha().compareTo(LocalDate.now());
+				Prueba itero = pruebas[i];
+				int diasItero = itero.getFecha().compareTo(LocalDate.now());
+				if (diasMinimo > diasItero) {
+					p = itero;
+				}
+			}
+		}
+		return p;
+	}
+
+	public void añadirPrueba(Prueba p) throws CompeticionException{
+			for (int i=0; i<pruebas.length;i++) {
+				if(p!=null && p.equals(pruebas[i]) || (p!=null && p.getEstado().equals(EstadoPrueba.PLANIFICADA) && p.getFecha().isBefore(LocalDate.now()))) {
+					throw new CompeticionException("No puedes añadir una prueba repetida ni con una fecha pasada siendo planificada");
+				}
+				else if(pruebas[i]==null){
+					pruebas[i]=p;
+				}
+			}
+			
+		
 	}
 }
