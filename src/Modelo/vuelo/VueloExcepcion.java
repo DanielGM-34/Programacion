@@ -5,5 +5,3 @@ public class VueloExcepcion extends Exception{
 		super(mensaje);
 
 	}} 
-
-

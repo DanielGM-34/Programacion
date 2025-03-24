@@ -10,7 +10,7 @@ public class Vuelo {
 	private LocalDate fechaVuelo;
 	private int duracion;
 	Estadovuelo estado;
-
+	
 	public String getIdentificador() {
 		return identificador;
 	}
@@ -90,8 +90,4 @@ public class Vuelo {
 		Vuelo other = (Vuelo) obj;
 		return Objects.equals(identificador, other.identificador);
 	}
-
-	
-	
-	
 }
