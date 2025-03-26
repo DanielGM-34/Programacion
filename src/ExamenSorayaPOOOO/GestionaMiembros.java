@@ -28,8 +28,8 @@ public class GestionaMiembros {
 			}
 			
 			// TODO: handle exception
-		}
-		*/
+		}*/
+		
 		
 	
 	}

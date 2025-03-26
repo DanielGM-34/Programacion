@@ -24,7 +24,7 @@ public class MiembroPremium extends MiembroBase {
 
 	public String getTipoUsuario() {
 		String tipoU;
-		if (this.tipo == tipo.PREMIUM_VIP) {
+		if (this.tipo == TipoPremium.PREMIUM_VIP) {
 			tipoU = "PREMIUM_VIP";
 		}
 
