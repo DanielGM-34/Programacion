@@ -1,6 +1,8 @@
 package ListasNuevasMarzo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Listas {
@@ -15,8 +17,7 @@ public class Listas {
 		lista.add("pepe");
 		lista.add("pepe");
 		lista.add("juan");
-		
-		
+
 		System.out.println(lista.toString());
 		System.out.println(lista.reversed());
 		System.out.println(lista.size());
@@ -26,8 +27,24 @@ public class Listas {
 		for (String d : lista) {
 			System.out.println(d);
 		}
+
+		// LinkedList= modificar muchas veces.
+
+		// ArrayLists= si no dice nada el enunciado.
+		List<String> nombre = new LinkedList<String>();
+		nombre.add("pepe");
+		nombre.add("Manuel");
+		nombre.add("pepe");
+		nombre.add("Manuel");
+		nombre.add("pepe");
+		nombre.add("Manuel");
+		nombre.add("pepe");
+		nombre.add("Manuel");
+		Iterator<String> itr = nombre.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 		
 		
 	}
-
 }
