@@ -24,14 +24,12 @@ public class GestionaBiblioteca {
 			case 2: {
 
 				f.prestar(b);
-
 				break;
 			}
 
 			case 3: {
 
 				f.devolver(b);
-
 				break;
 			}
 
@@ -85,6 +83,8 @@ public class GestionaBiblioteca {
 		Scanner input = new Scanner(System.in);
 		System.out.println();
 		System.out.println("Agregando un libro nuevo al inventario...");
+		System.out.println("Introduce el isbs: . ");
+		String isbn = input.nextLine();
 		System.out.println("Introduce los datos del libro.");
 		System.out.println("Introduce título. ");
 		String titulo = input.nextLine();
@@ -96,8 +96,7 @@ public class GestionaBiblioteca {
 		int anyo = input.nextInt();
 
 		input.nextLine();
-
-		Libro l = new Libro(titulo, nombre, genero, anyo, EstadoLibro.LIBRE);
+		Libro l = new Libro(isbn, titulo, nombre, genero, anyo, EstadoLibro.LIBRE);
 		b.anyadirLibro(l);
 		System.out.println("Libro añadido de forma exitosa.");
 		System.out.println();
