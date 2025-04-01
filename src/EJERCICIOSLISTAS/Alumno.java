@@ -2,7 +2,7 @@ package EJERCICIOSLISTAS;
 
 import java.util.Objects;
 
-public class Alumno {
+public class Alumno implements Comparable{
 	public String getNombre() {
 		return nombre;
 	}
@@ -43,6 +43,18 @@ public class Alumno {
 			return false;
 		Alumno other = (Alumno) obj;
 		return Objects.equals(dni, other.dni);
+	}
+
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", dni=" + dni + "]";
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -1,6 +1,6 @@
 package EJERCICIOSLISTAS;
 
-import java.util.LinkedList;
+import java.util.Collections;
 import java.util.List;
 
 public class GestionaEquiposAlumno {
@@ -13,8 +13,14 @@ public class GestionaEquiposAlumno {
 		Alumno manuel = new Alumno("manuel", "25485959P");
 
 		Equipo p = new Equipo("Equipo1");
+		Equipo p2 = new Equipo("Equipo2");
+        Collections.sort(p);
 
 		try {
+			p.agregaAlumno(pepe);
+			p.agregaAlumno(manuel);
+			p2.agregaAlumno(pepe);
+			p2.agregaAlumno(manuel);
 			p.agregaAlumno(pepe);
 			p.agregaAlumno(manuel);
 
@@ -30,6 +36,7 @@ public class GestionaEquiposAlumno {
 
 		}
 		System.out.println(p.toString());
+		System.out.println(p2.toString());
 
 	}
 

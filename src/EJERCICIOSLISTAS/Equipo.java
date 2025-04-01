@@ -1,16 +1,16 @@
 package EJERCICIOSLISTAS;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Equipo {
+public class Equipo{
 	private String nombreEquipo;
-	private List<Alumno> grupoAlumnos = new LinkedList<Alumno>();
+	private Set<Alumno> grupoAlumnos = new HashSet<Alumno>();
 
 	public Equipo(String nombreEquipo) {
 		super();
 		this.nombreEquipo = nombreEquipo;
-		grupoAlumnos = new LinkedList<Alumno>();
+		grupoAlumnos = new HashSet<Alumno>();
 	}
 
 	public String getNombreEquipo() {
@@ -21,11 +21,11 @@ public class Equipo {
 		this.nombreEquipo = nombreEquipo;
 	}
 
-	public List<Alumno> getGrupoAlumnos() {
+	public Set<Alumno> getGrupoAlumnos() {
 		return grupoAlumnos;
 	}
 
-	public void setGrupoAlumnos(List<Alumno> grupoAlumnos) {
+	public void setGrupoAlumnos(Set<Alumno> grupoAlumnos) {
 		this.grupoAlumnos = grupoAlumnos;
 	}
 
@@ -37,7 +37,6 @@ public class Equipo {
 		} else {
 			agregado = grupoAlumnos.add(p);
 		}
-
 		return agregado;
 	}
 
@@ -71,7 +70,6 @@ public class Equipo {
 			i = null;
 		}
 		return i;
-
 	}
 
 	@Override
