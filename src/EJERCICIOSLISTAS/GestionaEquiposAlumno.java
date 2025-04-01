@@ -14,7 +14,7 @@ public class GestionaEquiposAlumno {
 
 		Equipo p = new Equipo("Equipo1");
 		Equipo p2 = new Equipo("Equipo2");
-        Collections.sort(p);
+       /* Collections.sort(p);*/
 
 		try {
 			p.agregaAlumno(pepe);
