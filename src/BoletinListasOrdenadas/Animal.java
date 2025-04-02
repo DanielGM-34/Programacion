@@ -126,7 +126,7 @@ public class Animal implements Comparable<Animal> {
 
 	@Override
 	public int compareTo(Animal o) {
-		return this.nombre.compareTo(o.nombre);
+		return this.nombre.compareTo(o.getNombre());
 	}
 
 }

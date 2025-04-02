@@ -1,7 +1,8 @@
 package BoletinListasOrdenadas;
 
+import java.util.ArrayList;
 import java.util.HashSet;
-
+import java.util.List;
 import java.util.Set;
 
 public class ReservaAnimal {
@@ -41,10 +42,23 @@ public class ReservaAnimal {
 	public void setPresupuestoAnual(double presupuestoAnual) {
 		this.presupuestoAnual = presupuestoAnual;
 	}
-	
-	   public boolean agregarAnimal(Animal animal) {
-	        return listaAnimales.add(animal); 
-	    }
+
+	public boolean agregarAnimal(Animal animal) {
+		return listaAnimales.add(animal);
+	}
+
+	public void verAnimal() {
+		listaAnimales.toString();
+	}
+
+	public List<Animal> fromSetToList() {
+		List<Animal> animales = new ArrayList<Animal>();
+		for (Animal animal : listaAnimales) {
+			animales.add(animal);
+		}
+ 
+		return animales;
+	}
 
 	@Override
 	public String toString() {
@@ -57,7 +71,7 @@ public class ReservaAnimal {
 		this.nombre = nombre;
 		this.lugar = lugar;
 		this.presupuestoAnual = presupuestoAnual;
-		listaAnimales = new HashSet<Animal>();
+		this.listaAnimales = new HashSet<Animal>();
 	}
 
 }

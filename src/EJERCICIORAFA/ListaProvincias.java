@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ListaProvincias {
 	private List<Provincias> ListaProvincias;
@@ -49,6 +50,7 @@ public class ListaProvincias {
 	public static void main(String[] args) {
 		ListaProvincias listaProvincias = new ListaProvincias();
 		Set<Provincias> set1 = new HashSet<>();
+		Set<Provincias> set12 = new TreeSet<>();
 
 		set1.add(new Provincias("Sevilla", 110000));
 		set1.add(new Provincias("Cádiz", 114411));
