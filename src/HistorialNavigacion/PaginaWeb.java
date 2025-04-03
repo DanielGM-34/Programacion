@@ -1,11 +1,11 @@
 package HistorialNavigacion;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class PaginaWeb {
+public class PaginaWeb implements Comparable <PaginaWeb> {
 	private String url;
-	private LocalDateTime fecha;
+	private LocalDate fecha;
 
 	public String getUrl() {
 		return url;
@@ -15,15 +15,15 @@ public class PaginaWeb {
 		this.url = url;
 	}
 
-	public LocalDateTime getFecha() {
+	public LocalDate getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(LocalDateTime fecha) {
+	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 
-	public PaginaWeb(String url, LocalDateTime fecha) {
+	public PaginaWeb(String url, LocalDate fecha) {
 		super();
 		this.url = url;
 		this.fecha = fecha;
@@ -44,6 +44,11 @@ public class PaginaWeb {
 			return false;
 		PaginaWeb other = (PaginaWeb) obj;
 		return Objects.equals(fecha, other.fecha);
+	}
+	
+	@Override
+	public int compareTo(PaginaWeb o) {
+		return this.fecha.compareTo(o.getFecha());
 	}
 
 }
