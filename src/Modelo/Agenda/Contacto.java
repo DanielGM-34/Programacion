@@ -16,6 +16,13 @@ public class Contacto implements Comparable<Contacto> {
 		this.email = email;
 		this.direccion = direccion;
 		this.numTelef = numTelef;
+	} 
+
+	public Contacto(String nombre, String apellidos, String numTelef) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.numTelef = numTelef;
 	}
 
 	@Override
@@ -24,9 +31,11 @@ public class Contacto implements Comparable<Contacto> {
 				+ ", numTelef=" + numTelef + "]";
 	}
 
+
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(apellidos, nombre, numTelef);
+		return Objects.hash(apellidos, nombre);
 	}
 
 	@Override
@@ -38,8 +47,7 @@ public class Contacto implements Comparable<Contacto> {
 		if (getClass() != obj.getClass())
 			return false;
 		Contacto other = (Contacto) obj;
-		return Objects.equals(apellidos, other.apellidos) && Objects.equals(nombre, other.nombre)
-				&& Objects.equals(numTelef, other.numTelef);
+		return Objects.equals(apellidos, other.apellidos) && Objects.equals(nombre, other.nombre);
 	}
 
 	public String getNombre() {
@@ -82,7 +90,7 @@ public class Contacto implements Comparable<Contacto> {
 		this.numTelef = numTelef;
 	}
 
-	@Override
+	@Override 
 	public int compareTo(Contacto otro) {
 		int resultado = this.nombre.compareTo(otro.nombre);
 		if (resultado == 0) {

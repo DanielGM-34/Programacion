@@ -1,5 +1,6 @@
 package Modelo.Agenda;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -28,41 +29,48 @@ public class Agenda {
 		this.agendaContactos.add(a);
 	}
 
-	void eliminarContactoExistente(String nombre, String apellidos) {
+	public boolean eliminarContactoExistente(String nombre, String apellidos) {
 		boolean encontrado = false;
-
-		for (Contacto contacto : agendaContactos) {
+		Iterator<Contacto> it = agendaContactos.iterator();
+		while (it.hasNext()) {
+			Contacto contacto = it.next();
 			if (contacto.getNombre().equals(nombre) && contacto.getApellidos().equals(apellidos)) {
-				agendaContactos.remove(contacto);
+				it.remove();
 				encontrado = true;
 			}
 		}
-
 		if (encontrado) {
 			System.out.println("Contacto eliminado exitosamente.");
 		} else {
 			System.out.println("No se encontró ningún contacto con el nombre y apellidos proporcionados.");
 		}
+		return encontrado;
 	}
 
-	void buscarContacto(String nombre, String apellidos) {
-		for (Contacto contacto : agendaContactos) {
+	public void buscarContacto(String nombre, String apellidos) {
+		Iterator<Contacto> it = agendaContactos.iterator();
+		while (it.hasNext()) {
+			Contacto contacto = it.next();
 			if (contacto.getNombre().equals(nombre) && contacto.getApellidos().equals(apellidos)) {
 				System.out.println("Email del contacto: " + contacto.getEmail());
 				System.out.println("Teléfono del contacto" + contacto.getNumTelef());
+
 			}
+			System.out.println(contacto);
 		}
 
 	}
 
-	void buscarContactoPorTelf(String telef) {
-		for (Contacto contacto : agendaContactos) {
+	public void buscarContactoPorTelf(String telef) {
+		Iterator<Contacto> it = agendaContactos.iterator();
+		while (it.hasNext()) {
+			Contacto contacto = it.next();
 			if (contacto.getNumTelef().equals(telef)) {
 				System.out.println(agendaContactos);
-			}
-			else {
+			} else {
 				System.out.println("No se ha podido buscar el contacto.");
 			}
+			System.out.println(contacto);
 		}
 
 	}

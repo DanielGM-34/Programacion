@@ -12,6 +12,9 @@ public class GestionaAgenda {
 		Set<Contacto> listaLibrosBiblioteca = new TreeSet<Contacto>();
 		Agenda p = new Agenda(listaLibrosBiblioteca);
 		Contacto b = new Contacto("Pepe", "López", "pepe@gmail.com", "Calle false 2", "+34 652 325 145");
+		Contacto b2 = new Contacto("Manuel", "Garcia", "pepe@gmail.com", "Calle false 2", "+34 652 325 145");
+		p.agregarContacto(b2);
+		
 		p.agregarContacto(b);
 		boolean salir = false;
 		while (!salir) {
