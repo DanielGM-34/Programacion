@@ -58,7 +58,6 @@ public class Agenda {
 			}
 			System.out.println(contacto);
 		}
-
 	}
 
 	public void buscarContactoPorTelf(String telef) {

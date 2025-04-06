@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class AgendaMapa implements Comparable<Contacto> {
 	private Map<String, Contacto> agenda;
-
+	
 	public AgendaMapa() {
 		super();
 		this.agenda = new TreeMap<String, Contacto>();
