@@ -45,7 +45,7 @@ public class Entrada {
 		this.codEntrada = codEntrada;
 		this.fecha = fecha;
 		this.tipo = tipo;
-		this.estado = estado;
+		this.estado = EstadoEntrada.ENVIADA;
 	}
 
 }

@@ -19,6 +19,8 @@ public class GestionaAgendaConMapa {
 		a.getAgenda().put("1245678", b4);
 		System.out.println(a.getAgenda().size());
 
+		
+		/*
 		Set<Map.Entry<String, Contacto>> entradas = a.entrySet();
 		Entry<String, Contacto> elemento;
 
@@ -29,6 +31,7 @@ public class GestionaAgendaConMapa {
 			elemento.getValue();
 			System.out.println(elemento);
 		}
+		*/
 
 		/* Devuelve las claves. */
 		System.out.println(a.getAgenda().keySet());
