@@ -41,7 +41,7 @@ public class GestionaAgendaConMapa {
 		System.out.println(a.getAgenda().toString());
 
 		/* Devuelve el valor. */
-		System.out.println(a.getAgenda().get("1245678"));
+		System.out.println(a.getAgenda().get("454554"));
 
 	}
 

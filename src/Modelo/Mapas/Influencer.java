@@ -48,6 +48,7 @@ public class Influencer {
 		this.plataforma = plataforma;
 	}
 
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(nick, plataforma);

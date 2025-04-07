@@ -1,5 +1,6 @@
 package Modelo.Mapas;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -19,23 +20,32 @@ public class RegistroEntradas {
 		this.registro = new TreeMap<Entrada, Influencer>();
 	}
 
-	public boolean añadirEntrada(Influencer a, Entrada entrada) {
-		boolean Noagregado;
-		if (registro.containsKey(a)) {
+	public boolean añadirEntrada(Entrada entrada, Influencer a) {
+		boolean agregado;
+		if (registro.containsKey(entrada)) {
 			System.out.println("El influencer ya tiene una entrada asignada.");
-			Noagregado = false;
+			agregado = false;
 		} else {
 			System.out.println("Entrada agregada.");
 			registro.put(entrada, a);
-			Noagregado = true;
+			agregado = true;
 		}
-		return Noagregado;
+		return agregado;
 	}
 
-	public Influencer buscarEntradaAPartirDeNick(Influencer a) {
-	    return registro.get(a.getNick() + ":" + a.getPlataforma());
-	}
-	
+	public void listarInfluencers() {
+		Iterator<Entrada> iterator = registro.keySet().iterator();
+		while (iterator.hasNext()) {
+			Entrada entrada = iterator.next();
+			if (entrada.getEstado() == EstadoEntrada.CONFIRMADA) {
+				System.out.println(registro.get(entrada));
+			} else if (entrada.getEstado() == EstadoEntrada.CANCELADA) {
+				System.out.println(registro.get(entrada));
+			} else if (entrada.getEstado() == EstadoEntrada.ENVIADA) {
+				System.out.println(registro.get(entrada));
+			}
 
+		}
+	}
 
 }

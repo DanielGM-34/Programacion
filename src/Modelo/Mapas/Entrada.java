@@ -40,6 +40,18 @@ public class Entrada {
 		this.estado = estado;
 	}
 
+	public void asignarEstadoEntrada(EstadoEntrada nuevoEstado) {
+		this.estado = nuevoEstado;
+	}
+
+	public void confirmar() {
+		this.setEstado(EstadoEntrada.CONFIRMADA);
+	}
+
+	public void cancelar() {
+		this.setEstado(EstadoEntrada.CANCELADA);
+	}
+
 	public Entrada(String codEntrada, LocalDate fecha, TipoEntrada tipo, EstadoEntrada estado) {
 		super();
 		this.codEntrada = codEntrada;
