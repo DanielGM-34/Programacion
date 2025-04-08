@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 class RegistroTrafico {
-	Map<String, Vehiculo> vehiculos = new HashMap<>();
+	Map<String, Vehiculo> vehiculos = new TreeMap<>();
 
 	public void registrarVehiculo(Vehiculo vehiculo) {
 		vehiculos.put(vehiculo.getVIN(), vehiculo);

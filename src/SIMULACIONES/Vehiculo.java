@@ -3,7 +3,7 @@ package SIMULACIONES;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vehiculo {
+public class Vehiculo implements Comparable <Vehiculo>{
 	private String VIN;
 	private String matricula;
 	private String marca;
@@ -89,6 +89,11 @@ public class Vehiculo {
 	public String toString() {
 		return "Vehiculo [VIN=" + VIN + ", matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo
 				+ ", anioFabricacion=" + anioFabricacion + ", propietario=" + propietario + "]";
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		return this.matricula.compareTo(o.matricula);
 	}
 
 }
