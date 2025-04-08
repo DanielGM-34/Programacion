@@ -2,7 +2,7 @@ package Modelo.Mapas;
 
 import java.util.Objects;
 
-public class Influencer {
+public class Influencer implements Comparable<Influencer> {
 	private String nombre;
 	private String nick;
 	private int numSeguidores;
@@ -48,7 +48,6 @@ public class Influencer {
 		this.plataforma = plataforma;
 	}
 
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(nick, plataforma);
@@ -64,6 +63,11 @@ public class Influencer {
 			return false;
 		Influencer other = (Influencer) obj;
 		return Objects.equals(nick, other.nick) && Objects.equals(plataforma, other.plataforma);
+	}
+
+	@Override
+	public int compareTo(Influencer o) {
+		return Integer.compare(o.numSeguidores, this.numSeguidores);
 	}
 
 }

@@ -20,6 +20,16 @@ public class RegistroEntradas {
 		this.registro = new TreeMap<Entrada, Influencer>();
 	}
 
+	/*
+	 * public String buscar(Influencer a) { if (registro.containsValue(a.getNick()
+	 * && registro.containsValue(a.getPlataforma()))) {
+	 * 
+	 * }
+	 * 
+	 * return null;
+	 * 
+	 * }
+	 */
 	public boolean añadirEntrada(Entrada entrada, Influencer a) {
 		boolean agregado;
 		if (registro.containsKey(entrada)) {
@@ -47,5 +57,13 @@ public class RegistroEntradas {
 
 		}
 	}
+
+	/*
+	 * 
+	 * public Entrada buscarEntrada() { Iterator<Influencer> it =
+	 * registro.keySet().iterator(); Entrada e = null; while (it.hasNext()) {
+	 * Influencer element = it.next(); System.out.println(element); } }
+	 * 
+	 */
 
 }

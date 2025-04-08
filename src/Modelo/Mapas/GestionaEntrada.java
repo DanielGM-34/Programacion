@@ -19,7 +19,9 @@ public class GestionaEntrada {
 		Entrada p9 = new Entrada("S9", LocalDate.of(2024, 1, 4), TipoEntrada.SILVER, EstadoEntrada.ENVIADA);
 
 		RegistroEntradas reg1 = new RegistroEntradas();
-
+		
+		
+		
 	}
 
 }
