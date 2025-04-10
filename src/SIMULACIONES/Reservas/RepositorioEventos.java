@@ -47,7 +47,6 @@ public class RepositorioEventos {
 		return reservaEncontrada;
 	}
 
-	/* mE QUE´DE ATASKAO AKI */
 	public void agregarReserva(String email, String id) throws ReservaException {
 		Iterator<Evento> iterador = listaEventos.iterator();
 		while (iterador.hasNext()) {
@@ -58,6 +57,7 @@ public class RepositorioEventos {
 					Reserva reserva = iteradorReservas.next();
 					if (reserva.getUsuario().getEmail().equals(email)) {
 						throw new ReservaException("El usuario ya tiene una reserva en este evento.");
+
 
 					}
 				}
