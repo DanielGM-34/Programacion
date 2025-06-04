@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-import ListasNuevasMarzo.Libro;
+import EjercicioBoletin1ListasBiblioteca.Libro;
 
 public class Prestamo {
 	private int id;
