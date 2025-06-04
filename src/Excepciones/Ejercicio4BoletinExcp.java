@@ -8,7 +8,6 @@ public class Ejercicio4BoletinExcp {
 	public static void main(String[] args) {
 		Float[] listaNum = new Float[20];
 		Random numAleatorio = new Random();
-
 		for (int i = 0; i < 20; i++) {
 
 			try {
@@ -27,6 +26,7 @@ public class Ejercicio4BoletinExcp {
 
 			} catch (ArithmeticException e) {
 				System.out.println("Ha salido un 0 de denominador.");
+				throw e;
 			}
 
 			catch (ArrayIndexOutOfBoundsException e2) {

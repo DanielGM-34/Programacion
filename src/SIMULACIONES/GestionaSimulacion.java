@@ -16,10 +16,8 @@ public class GestionaSimulacion {
 		Remetriculación r3 = new Remetriculación("3CZRE4H59BG700001", "9101QWE", "3333JKL", LocalDate.of(2023, 3, 10));
 		Remetriculación r4 = new Remetriculación("1HGBH41JXMN109186", "1111DEF", "4444MNO", LocalDate.of(2024, 1, 5));
 		
-		RegistroTrafico r = new RegistroTrafico();
-		
-		vehiculos.put(r1, v1);
-		r.filtrarNumBast(v1, r1);
+		RegistroTrafico2 r = new RegistroTrafico2();
+		r.añadirVehiculo();
 	}
 
 }

@@ -5,6 +5,8 @@ import java.util.InputMismatchException;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
+		
+
 		try {
 			throw new InputMismatchException("InputMismatchException porque quiero");
 		} catch (InputMismatchException e) {
