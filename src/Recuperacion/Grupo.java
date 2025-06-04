@@ -65,5 +65,9 @@ public class Grupo {
 	public void agregarEstudiante(Estudiante a) {
 		this.getEstudiantes().add(a);
 	}
+	
+	public void verListaEstudiante() {
+		System.out.println(getEstudiantes());
+	}
 
 }

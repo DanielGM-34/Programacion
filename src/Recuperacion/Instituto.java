@@ -22,5 +22,9 @@ public class Instituto {
 	public String toString() {
 		return "Instituto [Listagrupos=" + Listagrupos + "]";
 	}
+	
+	public void agregarGrupo(Grupo a) {
+		this.getListagrupos().add(a);
+	}
 
 }
