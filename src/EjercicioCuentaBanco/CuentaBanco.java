@@ -5,7 +5,7 @@ public class CuentaBanco {
 		super();
 		this.saldo = saldo;
 		this.numCuenta = numCuenta;
-		this.titular = titular;
+		this.titular = titular; 
 		this.autorizado = autorizado;
 	}
 
