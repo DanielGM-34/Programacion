@@ -102,12 +102,11 @@ public class Grupo {
 	}
 
 	public double calcularPromedioGrupo() throws EstudianteException {
+		double sumaNotas = 0;
+		int totalNotas = 0;
 		if (estudiantes.isEmpty()) {
 			throw new EstudianteException("El grupo no tiene estudiantes.");
 		}
-
-		double sumaNotas = 0;
-		int totalNotas = 0;
 
 		for (Estudiante estudiante : estudiantes) {
 			for (double nota : estudiante.getNotas()) {
@@ -119,7 +118,7 @@ public class Grupo {
 		if (totalNotas == 0) {
 			throw new EstudianteException("No hay notas registradas en este grupo.");
 		}
- 
+
 		return sumaNotas / totalNotas;
 	}
 

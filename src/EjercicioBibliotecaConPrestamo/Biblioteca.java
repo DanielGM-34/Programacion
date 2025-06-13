@@ -1,4 +1,4 @@
-package EjercicioBibliotecaSinPrestamo;
+package EjercicioBibliotecaConPrestamo;
 
 import java.util.ArrayList;
 import java.util.List;

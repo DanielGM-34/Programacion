@@ -9,7 +9,7 @@ public class GestionInstituto {
 		boolean continuar = true;
 
 		while (continuar) {
-			System.out.println("\nOpciones:");
+			System.out.println("Opciones:");
 			System.out.println("1. Agregar grupo");
 			System.out.println("2. Agregar estudiante a un grupo");
 			System.out.println("3. Mostrar lista de estudiantes por grupo");
@@ -76,7 +76,7 @@ public class GestionInstituto {
 					System.out.println("Opción inválida. Inténtalo de nuevo.");
 				}
 			} catch (EstudianteException | GrupoException e) {
-				System.out.println("Error: " + e.getMessage());
+				System.out.println("Se produjo un fallo: " + e.getMessage());
 			}
 		}
 

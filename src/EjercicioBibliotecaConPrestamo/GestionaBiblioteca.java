@@ -1,4 +1,4 @@
-package EjercicioBibliotecaSinPrestamo;
+package EjercicioBibliotecaConPrestamo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class GestionaBiblioteca {
 		boolean continuar = true;
 
 		while (continuar) {
-			System.out.println("\nMenú:");
+			System.out.println("Menú:");
 			System.out.println("1. Agregar libro");
 			System.out.println("2. Prestar libro");
 			System.out.println("3. Devolver libro");
@@ -49,6 +49,7 @@ public class GestionaBiblioteca {
 					break;
 				case 6:
 					continuar = false;
+					System.out.println("Saliendo...");
 					break;
 				}
 			} catch (BibliotecaException e) {

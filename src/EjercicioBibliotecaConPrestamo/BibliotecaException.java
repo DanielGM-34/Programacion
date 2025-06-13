@@ -1,4 +1,4 @@
-package EjercicioBibliotecaSinPrestamo;
+package EjercicioBibliotecaConPrestamo;
 
 public class BibliotecaException extends Exception {
 

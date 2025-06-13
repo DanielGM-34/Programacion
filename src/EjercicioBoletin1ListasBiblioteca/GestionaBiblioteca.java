@@ -11,8 +11,8 @@ public class GestionaBiblioteca {
 		GestionaBiblioteca f = new GestionaBiblioteca();
 		List<Libro> listaLibrosBiblioteca = new ArrayList<Libro>();
 		Biblioteca b = new Biblioteca(listaLibrosBiblioteca);
-		boolean salir = false;
-		while (!salir) {
+		boolean salir = true;
+		while (salir) {
 			int opcion = f.menu(input);
 
 			switch (opcion) {
@@ -49,7 +49,8 @@ public class GestionaBiblioteca {
 			}
 
 			case 7: {
-				salir = f.salirPrograma();
+				salir = false;
+				System.out.println("Saliendo...");
 				break;
 			}
 
@@ -188,9 +189,4 @@ public class GestionaBiblioteca {
 		}
 	}
 
-	boolean salirPrograma() {
-		System.out.println();
-		System.out.println("Saliendo del programa...");
-		return true;
-	}
 }

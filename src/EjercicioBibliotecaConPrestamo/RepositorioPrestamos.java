@@ -1,4 +1,4 @@
-package EjercicioBibliotecaSinPrestamo;
+package EjercicioBibliotecaConPrestamo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,6 +8,14 @@ public class RepositorioPrestamos {
 
 	public RepositorioPrestamos() {
 		this.prestamos = new LinkedList<>();
+	}
+
+	public List<Prestamo> getPrestamos() {
+		return prestamos;
+	}
+
+	public void setPrestamos(List<Prestamo> prestamos) {
+		this.prestamos = prestamos;
 	}
 
 	@Override
@@ -28,10 +36,10 @@ public class RepositorioPrestamos {
 	public void devolverLibro(Libro libro) throws BibliotecaException {
 		boolean prestamoEncontrado = false;
 
-		for (Prestamo prestamo : prestamos) {
+		for (Prestamo prestamo : this.getPrestamos()) {
 			if (prestamo.getLibro().equals(libro)) {
 				libro.setEstado(EstadoLibro.LIBRE);
-				System.out.println("El libro \"" + libro.getTitulo() + "\" ha sido devuelto.");
+				System.out.println("El libro " + libro.getTitulo() + "ha sido devuelto.");
 				prestamoEncontrado = true;
 			}
 		}
@@ -45,14 +53,13 @@ public class RepositorioPrestamos {
 		if (prestamos.isEmpty()) {
 			System.out.println("No hay préstamos registrados.");
 		} else {
-			prestamos.forEach(System.out::println);
-			System.out.println(this.prestamos);
+			System.out.println(this.getPrestamos());
 		}
 	}
 
 	public void mostrarPrestamosPorISBN(String isbn) {
 		boolean encontrado = false;
-		for (Prestamo prestamo : prestamos) {
+		for (Prestamo prestamo : this.getPrestamos()) {
 			if (prestamo.getLibro().getIsbn().equals(isbn)) {
 				System.out.println(prestamo);
 				encontrado = true;
