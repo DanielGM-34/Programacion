@@ -84,7 +84,7 @@ public class RegistroEncuentros {
 			Sinluz sinluz = listaSinLuz.next();
 			if (sinluz.mayorA6()) {
 				listaMayorA6.add(sinluz);
-			}
+			} 
 
 		}
 
